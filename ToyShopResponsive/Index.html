@@ -6,59 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <!-- Header Showcase -->
-    <header id="showcase" class="grid">
-        <div class="offer-wrap">
-            <a href="#" class="offer link">Free Shipping - Up to $10 credit on orders over $75</a>
-        </div>
-        <div class="hamburger-wrap">
-            <a href="" class="fa fa-bars hamburger btn"></a>
-        </div>
-        <div class="logo-wrap">
-            <img class="logo" src="images/toy-shop-logo.png" alt="Logo">
-        </div>
-        <div class="cart-wrap">
-            <a href="" class="fa fa-shopping-cart cart btn">&nbsp;2</a>
-        </div>
-        <div class="nav-menu" id="showcase-nav-menu grid">
-            <div class="close-search grid">
-                <a href="" class="fa fa-close btn"></a>
-
-                <a href="" class="fa fa-search btn"></a>
+    <!-- - - - - - - - - Header Showcase - - - - - - - -->
+    <header>
+        <div id="showcase" class="grid">
+            <div class="offer-wrap">
+                <a href="#" class="offer link">Free Shipping - Up to $10 credit on orders over $75</a>
             </div>
+            <div class="hamburger-wrap">
+                <a href="" class="fa fa-bars hamburger btn"></a>
+            </div>
+            <div class="logo-wrap">
+                <img class="logo" src="images/toy-shop-logo.png" alt="Logo">
+            </div>
+            <div class="cart-wrap">
+                <a href="" class="fa fa-shopping-cart cart btn">&nbsp;2</a>
+            </div>
+            <div class="nav-menu" id="showcase-nav-menu grid">
+                <div class="close-search grid">
+                    <a href="" class="fa fa-close btn"></a>
 
-            <ul class="primary-nav">
+                    <a href="" class="fa fa-search btn"></a>
+                </div>
+
+                <ul class="primary-nav">
+                    <li>
+                        <a href="" class="btn">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="" class="btn">Category</a>
+                        <a href="" class="fa fa-angle-down btn"></a>
+                    </li>
+                    <li>
+                        <a href="" class="btn">Brand</a>
+                        <a href="" class="fa fa-angle-down btn"></a>
+                    </li>
+                    <li>
+                        <a href="" class="btn">Age</a>
+                        <a href="" class="fa fa-angle-down btn"></a>
+                    </li>
+                    <li>
+                        <a href="" class="btn">Books</a>
+                        <a href="" class="fa fa-angle-down btn"></a>
+                    </li>
+                    <li class="final-li">
+                        <a href="" class="btn">Customize</a>
+                        <a href="" class="fa fa-angle-down btn"></a>
+                    </li>
+                </ul>
+
+                <ul class="secondary-nav">
+                    <li>
+                        <a href="" class="btn">About Us</a>
+                    </li>
+                    <li>
+                        <a href="" class="btn">Events</a>
+                    </li>
+                    <li>
+                        <a href="" class="btn">Promotions</a>
+                    </li>
+                </ul>
+
+                <div class="social-media-icons">
+                    <a href="" class="fa fa-facebook btn"></a>
+
+                    <a href="" class="fa fa-twitter btn"></a>
+
+                    <a href="" class="fa fa-google-plus btn"></a>
+
+                    <a href="" class="fa fa-envelope btn"></a>
+                </div>
+            </div>
+            <!-- - - - - - - - Desktop View - - - - - - -->
+            <ul class="desktop-only primary-nav grid">
                 <li>
-                    <a href="" class="btn">Sign In</a>
+                    <a href="" class="btn">Home</a>
                 </li>
                 <li>
                     <a href="" class="btn">Category</a>
-                    <a href="" class="fa fa-angle-down btn"></a>
                 </li>
                 <li>
                     <a href="" class="btn">Brand</a>
-                    <a href="" class="fa fa-angle-down btn"></a>
                 </li>
                 <li>
                     <a href="" class="btn">Age</a>
-                    <a href="" class="fa fa-angle-down btn"></a>
                 </li>
                 <li>
                     <a href="" class="btn">Books</a>
-                    <a href="" class="fa fa-angle-down btn"></a>
                 </li>
-                <li class="final-li">
+                <li>
                     <a href="" class="btn">Customize</a>
-                    <a href="" class="fa fa-angle-down btn"></a>
                 </li>
             </ul>
 
-            <ul class="secondary-nav">
+            <ul class="desktop-only secondary-nav">
                 <li>
                     <a href="" class="btn">About Us</a>
                 </li>
@@ -68,75 +113,31 @@
                 <li>
                     <a href="" class="btn">Promotions</a>
                 </li>
+                <li>
+                    <a href="" class="btn">My Account</a>
+                </li>
             </ul>
 
-            <div class="social-media-icons">
-                <a href="" class="fa fa-facebook btn"></a>
-
-                <a href="" class="fa fa-twitter btn"></a>
-
-                <a href="" class="fa fa-google-plus btn"></a>
-
-                <a href="" class="fa fa-envelope btn"></a>
+            <div class="desktop-only search-bar">
+                <select>
+                    <option value="all">All</option>
+                    <option value="home">Home</option>
+                </select>
+                <input type="text" placeholder=" Search">
             </div>
-        </div>
-        <!-- - - - - - - - Desktop View - - - - - - -->
-        <ul class="desktop-only primary-nav grid">
-            <li>
-                <a href="" class="btn">Home</a>
-            </li>
-            <li>
-                <a href="" class="btn">Category</a>
-            </li>
-            <li>
-                <a href="" class="btn">Brand</a>
-            </li>
-            <li>
-                <a href="" class="btn">Age</a>
-            </li>
-            <li>
-                <a href="" class="btn">Books</a>
-            </li>
-            <li>
-                <a href="" class="btn">Customize</a>
-            </li>
-        </ul>
-
-        <ul class="desktop-only secondary-nav">
-            <li>
-                <a href="" class="btn">About Us</a>
-            </li>
-            <li>
-                <a href="" class="btn">Events</a>
-            </li>
-            <li>
-                <a href="" class="btn">Promotions</a>
-            </li>
-            <li>
-                <a href="" class="btn">My Account</a>
-            </li>
-        </ul>
-
-        <div class="desktop-only search-bar">
-            <select>
-                <option value="all">All</option>
-                <option value="home">Home</option>
-            </select>
-            <input type="text" placeholder="Search..">
-        </div>
-        <!--Desktop-Only Ends-->
+            <!--Desktop-Only Ends-->
+    </div>
     </header>
-    <!-- - - - - - Main Area - - - - - -->
+    <!-- - - - - - - - - Main Area - - - - - - - - -->
     <main id="main">
         <!-- Section A -->
         <section id="section-a" class="grid">
             <div class="content-wrap">
                 <div class="bg-image">
                     <div class="content-body desktop-only">
-                        <p class="content-text">Encourage the joy of learning and discovery through play.</p>
+                        <p class="content-text">Encourage the joy of learning and <br>discovery through play.</p>
                     </div>
-                    <a href="#" class="btn"><span class="btn-text">Shop Now</span></a>
-                    <br>
+                    <a href="#" class="shop-now btn"><span class="btn-text">Shop Now</span></a>
                     <div class="dots">
                         <i class="dot active-dot">&#9679;</i>
                         <i class="dot">&#9679;</i>
@@ -144,10 +145,9 @@
                     </div>
                 </div>
                 <div class="content-body">
-                    <p class="content-text"><b>Encourage the joy of learning and discovery through play</b></p>
+                    <p class="content-text"><b>Encourage the joy of learning and <br>discovery through play.</b></p>
                 </div>
-            </div>
-            
+            </div>           
         </section>
         <!-- Section B -->
         <section id="section-b" class="grid">
@@ -156,13 +156,13 @@
                 <h2 class="content-title">BEST SELLERS</h2>
                 <!-- Slide Show -->
                 <div class="slide-show grid">
-                    <a class="btn btn-left" onclick="">&#10094;</a>
+                    <a class="control btn btn-left" onclick="">&#10094;</a>
                     <div class="card" id="visible-card">
                         <div class="image-wrap">
                             <a href="#" class="clickable-image"><img class="best-seller-image" src="https://gdurl.com/7OyL" alt="Slide-Show Image"></a>
                         </div>
                         <div class="card-body">
-                            <a href="" class="best-seller-name">Alphabet Blocks</a>
+                            <a href="" class="best-seller-name btn">Balance Bike</a>
                             <br><b class="best-seller-price">$39.99</b>
                             <div class="best-seller-rating heart-rating" title="70%">
                                 <div class="back-hearts">
@@ -181,7 +181,7 @@
                             <a href="#" class="clickable-image"><img class="best-seller-image" src="https://gdurl.com/7OyL" alt="Slide-Show Image"></a>
                         </div>
                         <div class="card-body">
-                            <a href="" class="best-seller-name">Alphabet Blocks</a>
+                            <a href="" class="best-seller-name btn">Alphabet Blocks</a>
                             <br><b class="best-seller-price">$39.99</b>
                             <div class="best-seller-rating heart-rating" title="70%">
                                 <div class="back-hearts">
@@ -195,13 +195,12 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="image-wrap">
                             <a href="#" class="clickable-image"><img class="best-seller-image" src="https://gdurl.com/7OyL" alt="Slide-Show Image"></a>
                         </div>
                         <div class="card-body">
-                            <a href="" class="best-seller-name">Alphabet Blocks</a>
+                            <a href="" class="best-seller-name btn">Alphabet Blocks</a>
                             <br><b class="best-seller-price">$39.99</b>
                             <div class="best-seller-rating heart-rating" title="70%">
                                 <div class="back-hearts">
@@ -215,13 +214,12 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="image-wrap">
                             <a href="#" class="clickable-image"><img class="best-seller-image" src="https://gdurl.com/7OyL" alt="Slide-Show Image"></a>
                         </div>
                         <div class="card-body">
-                            <a href="" class="best-seller-name">Alphabet Blocks</a>
+                            <a href="" class="best-seller-name btn">Alphabet Blocks</a>
                             <br><b class="best-seller-price">$39.99</b>
                             <div class="best-seller-rating heart-rating" title="70%">
                                 <div class="back-hearts">
@@ -235,7 +233,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-right" onclick="">&#10095;</a>
+                    <a class="control btn btn-right" onclick="">&#10095;</a>
                     <!-- Slide Show Ends-->
                 </div>
         </section>
@@ -244,7 +242,7 @@
             <div class="content-wrap feature-toys">
                 <h2 class="content-title">FEATURE TOYS</h2>
                 <div class="customize-toys">
-                    <video class="customize-video" width="320" height="240" controls>
+                    <video class="customize-video" controls>
                     </video>
                     <div class="video-content">
                         <h3 class="video-title">Turn Your Art Into Real</h3>
@@ -252,7 +250,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="http://2.bp.blogspot.com/-yjyu7-Ywnzs/UZ9OW-oXPuI/AAAAAAAAJBY/Xz2rI6ufxZo/s1600/boy+playing+with+lego.jpg" alt="Number Puzzle Toy">
+                    <img src="https://i.pinimg.com/originals/f9/08/cd/f908cd25a268eec4bb0e072e6aa4d70c.jpg" alt="Educational Toy">
                     <div class="card-content">
                         <h3 class="card-title">Gain Play Value</h3>
                         <p class="card-text desktop-only">A toy with good play value has lasting appeal, teaches numerous skills and encourages exploration.</p>
@@ -260,7 +258,7 @@
                     </div>
                 </div>
                 <div class="card opposite-card">
-                    <img src="https://i.ytimg.com/vi/2qFDUhrb_7c/maxresdefault.jpg" alt="Glider Toy">
+                    <img src="https://i.ytimg.com/vi/2qFDUhrb_7c/maxresdefault.jpg" alt="Eco-Friendly Toy">
                     <div class="card-content">
                         <h3 class="card-title">Eco-Friendly<br>Play With Nature</h3>
                         <p class="card-text desktop-only">We have a large selection of products made from sustainable resources and earth-friendly materials.</p>
@@ -314,89 +312,79 @@
 
         </section>
     </main>
-    <!-- Footer -->
+    <!-- - - - - - - - - Footer - - - - - - - - -->
     <footer id="epilogue" class="grid">     
         <div class="content-wrap">
-            <div class="nav-bar-wrap">
-                <ul class="nav-bar">
-                    <li>
-                        <a href="#" class="nav-title btn">Contact Us</a>
-                    </li>
-                    <li>                        
-                        <a href="#" class="nav-title btn">Store Hours</a>
-                    </li>
-                    <li>                       
-                        <a href="#" class="nav-title btn">Customer Service</a>
-                    </li>
-                    <li>                        
-                        <a href="#" class="nav-title btn">Help</a>
-                    </li>
-                    <li>                       
-                        <a href="#" class="nav-title btn">Corporate</a>
-                    </li>
-                </ul>                
-            </div>
-            <div class="nav-wrap">
+            <div class="nav-wrap content-body">
                 <ul class="nav">
                     <li class="contact-info">
-                        <div class="desktop-only">
-                            <p class="store-address">
-                                581 Danforth Avenue<br>
-                                Toronto, Ontario<br>
-                                M4K 1PG                           
-                            </p>
-                            <p class="store-telephone">
-                                Telephone:<br>
-                                416-778-4913                         
-                            </p>
-                            <p class="store-toll-free">
-                                Toll Free:<br>
-                                1-855-869-2469<br>
-                                (1-855-TOY AHOY)                      
-                            </p>          
-                        </div>
+                        <a href="#" class="btn">Contact Us</a>
+                    </li>
+                    <li class="store-hours">                        
+                        <a href="#" class="btn">Store Hours</a>
+                    </li>
+                    <li class="customer-service">                       
+                        <a href="#" class="btn">Customer Service</a>
+                    </li>
+                    <li class="help">                        
+                        <a href="#" class="btn">Help</a>
+                    </li>
+                    <li class="corporate">                       
+                        <a href="#" class="btn">Corporate</a>
+                    </li>
+                </ul>               
+            </div>
+            <div class="secondary-nav-wrap desktop-only content-body">
+                <ul class="secondary-nav">
+                    <li class="contact-info">
+                        <p class="store-address">
+                            581 Danforth Avenue<br>
+                            Toronto, Ontario<br>
+                            M4K 1PG                           
+                        </p>
+                        <p class="store-telephone">
+                            Telephone:<br>
+                            416-778-4913                         
+                        </p>
+                        <p class="store-toll-free">
+                            Toll Free:<br>
+                            1-855-869-2469<br>
+                            (1-855-TOY AHOY)                      
+                        </p> 
                     </li>
                     <li class="store-hours">
-                        <div class="desktop-only">
-                            <p>
-                                Monday - Wednesday:  <br>
-                                9:30am to 6pm<br><br>
-    
-                                Thursday & Friday:<br>
-                                9:30am to 7pm<br><br>
-    
-                                Sundays:  11am to 5pm<br>                    
-                            </p>                  
-                        </div>
+                        <p>
+                            Monday - Wednesday:  <br>
+                            9:30am to 6pm<br><br>
+
+                            Thursday & Friday:<br>
+                            9:30am to 7pm<br><br>
+
+                            Sundays:  11am to 5pm<br>                    
+                        </p>
                     </li>
                     <li class="customer-service">
-                        <div class="desktop-only">
-                            <a href="">Search</a>
-                            <a href="">Pirate Points</a>
-                            <a href="">Loot Bags</a>
-                            <a href="">Balloons</a>
-                            <a href="">Return Policy</a>
-                            <a href="">Shipping</a>
-                        </div>
+                        <a href="">Search</a>
+                        <a href="">Pirate Points</a>
+                        <a href="">Loot Bags</a>
+                        <a href="">Balloons</a>
+                        <a href="">Return Policy</a>
+                        <a href="">Shipping</a>
                     </li>
                     <li class="help">
-                        <div class="desktop-only">
-                            <a href="">FAQ</a>
-                            <a href="">Live Chat</a>
-                            <a href="">Email</a>
-                        </div>
+                        <a href="">FAQ</a>
+                        <a href="">Live Chat</a>
+                        <a href="">Email</a>
                     </li>
                     <li class="corporate">
-                        <div class="desktop-only">
-                            <a href="">Educational</a>
-                            <a href="">Career</a>
-                            <a href="">Ventor</a>
-                        </div>
+                        <a href="">Educational</a>
+                        <a href="">Career</a>
+                        <a href="">Ventor</a>
                     </li>
                 </ul>
-                <div class="copyright-wrap">               
-                    <a href="#" class="copyright btn">© 2018 Teasure Island Toys</a>
-                </div>
+            </div>
+            <div class="copyright-wrap content-body">
+                <a href="#" class="copyright btn">© 2018 Teasure Island Toys</a>
             </div>
         </div>
     </footer>

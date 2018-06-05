@@ -1,13 +1,30 @@
     /* ------------- Core Styles ------------- */
 
+html { 
+    font-size: 3vw;
+    /* minfontpx + (max - minfont) x (100vw - minscrpx) / (max - minscr) */
+    font-family: Helvetica, sans-serif;    
+    line-height: 1.5;    
+    text-align: center;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Helvetica;
-    background: rgb(255, 255, 255);
-    line-height: 1.5;
-    text-align: center;
-    font-size: 3vw;
+}
+
+
+section {
+    margin: 0 1rem;
+}
+
+div {  
+    color: #203760;
+}
+
+a {    
+    text-decoration: none;
+    color: #203760;
 }
 
 img {
@@ -17,22 +34,18 @@ img {
 }
 
 h2 {
-    margin: 3vw 0 0 0;
-    padding: .3em 0;
+    margin: 1rem 0 0 0;
+    padding: .3rem 0;
 }
 
 h3 {
     margin: 0;
-    padding: .3em 0;
+    padding: .3rem 0;
 }
 
 p {
     margin: 0;
-    padding: .5em 0;
-}
-
-a {
-    text-decoration: none;
+    padding: .5rem 0;
 }
 
 ul {
@@ -40,16 +53,10 @@ ul {
     padding: 0;
 }
 
-fa {
-    text-align: center;
-}
-
 .btn {
     display: inline-block;
-    color: darkblue;
-    text-decoration: none;
-    padding: .2em;
-    margin: .3em;
+    padding: 0;
+    margin: 0;
     cursor: pointer;
 }
 
@@ -66,17 +73,33 @@ fa {
 section h2 {   
     display: inline-block;
     color: #3A71AA;  
-    border-bottom: 2px solid #73C3E2;
-    margin-bottom: 1em;
-    padding: 0 7vw;
+    border-bottom: 1px solid #73C3E2;
+    margin-bottom: 1rem;
+    padding: 0 2.3rem;
 }
 
 .desktop-only {
     display: none;
 }
 
+.image-wrap {           
+    overflow: hidden;
+}
+
+.social-media-icons .btn {
+    text-align: center;   
+}
+
 
 /*--------------------------------------- Header Showcase ---------------------------------------*/
+
+
+header {
+    display: flex;
+    justify-content: center;
+    
+    background-color: rgba(169, 218, 230, 0.796);
+}
 
 #showcase {
     grid-template-areas: 
@@ -86,18 +109,20 @@ section h2 {
     ".  .  .  lg lg lg lg lg lg .  .  . "
     "nm nm nm nm nm nm nm nm nm nm nm nm";
     text-align: center;
-    background-color: rgba(169, 218, 230, 0.796);
+}
+
+#showcase * {       
+    color: rgba(255, 255, 255, 0.857);
 }
 
 #showcase .offer-wrap {
     background-color: #3A71AA;
-    padding: .3em 0;
+    padding: .3rem 0;
     grid-area: of;
 }
 
 #showcase .offer {
-    color: rgba(255, 255, 255, 0.857);
-    font-size: 2.7vw;
+    font-size: 0.9rem;
 }
 
 #showcase .hamburger-wrap {
@@ -106,25 +131,25 @@ section h2 {
 
 #showcase .hamburger {
     color: #f6596b;
-    font-size: 6vw;
+    font-size: 2rem;
 }
 
 #showcase .logo-wrap {
-    margin: .5em 0;
+    margin: .5rem 0;
     grid-area: lg;
 }
 
 #showcase .cart-wrap {
-    margin-top: 2vw;
+    margin-top: 0.66rem;
     /*Equilizing the cart and hb*/
     grid-area: cr;
 }
 
 #showcase .cart {
-    color: white;
     background-color: #F6596B;
     border-radius: 20%;
-    font-size: 4vw;
+    font-size: 1.33rem;
+    padding: .16rem;
 }
 
 
@@ -140,25 +165,22 @@ section h2 {
 
 #showcase .nav-menu li {
     display: block;
-    margin: 0 2vw;
+    margin: 0 .66rem;
 }
 
 #showcase .nav-menu li a {
-    padding: 1vw 3vw 1vw 1vw;
+    padding: .33rem 1rem .33rem .33rem;
     color: #203760;
 }
 
-
-/*---  Close and Search ---*/
-
 #showcase .nav-menu .close-search {
     background-color: #3A71AA;
-    padding: 2vw 0;
+    padding: .66rem 0;
 }
 
 #showcase .nav-menu .close-search a {
     color: #C6F3F3;
-    font-size: 4vw;
+    font-size: 1.33rem;
     text-align: center;
 }
 
@@ -175,14 +197,14 @@ section h2 {
 }
 
 
-/*---  Primary Nav ---*/
+/*---  Menu Primary Nav ---*/
 
 #showcase .primary-nav li {
-    border-bottom: .3vw solid rgba(93, 141, 192, 0.919);
+    border-bottom: .1rem solid rgba(93, 141, 192, 0.919);
 }
 
 #showcase .primary-nav .final-li {
-    border-bottom: .5vw solid rgba(93, 141, 192, 0.919);
+    border-bottom: .15rem solid rgba(93, 141, 192, 0.919);
 }
 
 #showcase .primary-nav a {
@@ -191,13 +213,14 @@ section h2 {
 
 #showcase .primary-nav .fa {
     float: right;
-    padding-left: 3vw;
-    font-size: 4vw;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: 1.33rem;
     color: rgba(93, 141, 192, 0.919);
 }
 
 
-/*---  Secondary Nav (Currently No Styling Needed) ---*/
+/*---  Menu Secondary Nav (Currently No Styling Needed) ---*/
 
 
 /*--- Social Media Icons ---*/
@@ -206,86 +229,87 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: .7vw solid rgba(93, 141, 192, 0.919);
-    padding-bottom: 2vw;
-    margin-bottom: 15vw;
+    border-bottom: .2rem solid rgba(93, 141, 192, 0.919);
+    padding-bottom: .66rem;
+    margin-bottom: 5rem;
 }
 
-#showcase .social-media-icons .btn {
+#showcase .social-media-icons .btn { 
     border-radius: 50%;
-    padding: 1vw;
-    height: 4.5vw;
-    width: 4.5vw;
-    font-size: 4vw;
-    border: .5vw solid #3A71AA;
-    color: #3A71AA;
-    text-align: center;
+    margin: .33rem;
+    height: 2.1rem;
+    width: 2.1rem;   
+    line-height: 2.1rem;
+    font-size: 1.33rem;      
+    color: #3A71AA; 
+    border: .16rem solid #3A71AA;
 }
 
 
 /*--------------------------------------- Main --------------------------------------------------*/
 
-main {
-    margin: 0 .5em;
-}
-
 
 /* ------------- Section A / Background Image ------------- */
 
 #section-a {
-    margin-top: 0em;
     color: #203760;
+    margin: 0;
 }
 
 #section-a .content-wrap {
-    grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column: 1/13;
 }
 
 #section-a .bg-image {
-    background: #333 url('https://s9.postimg.cc/6ipfiwb73/kid-abacus.jpg');
-    background-position: 50% 50%;
+    background: rgba(51, 51, 51, 0.654) url('https://fthmb.tqn.com/9tlru_UIY_vf_5qcI0G7j28S-So=/2250x1500/filters:no_upscale():max_bytes(150000):strip_icc()/fun-learning-games-577929db5f9b58587593c0d1.jpg');
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 35%;   
-    padding-top: 45%;
+    padding-top: 16rem;
     z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,auto);
 }
 
-#section-a .bg-image .btn {
-    position: relative;
-    padding: 1vw;
-    border-radius: 1vw;
-    border: 1.5px solid #5679b6;
+#section-a .bg-image .shop-now {
+    display: inline-block;
+    font-size: .9rem;
+    grid-column: 6/8;
+    padding: .3rem .1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: .08rem solid #203760;
+}
+
+#section-a .dots {
+    grid-column: 6/8;
+    grid-row: 12/13;
 }
 
 #section-a .dot {
-    font-size: 3vw;
-    margin: .5vw;
-    color: rgb(213, 213, 213);
+    font-size: 1rem;
+    margin: .15rem;
+    color: rgba(100, 100, 100, 0.30);
 }
 
 #section-a .active-dot {
-    color: rgb(175, 175, 175);
-}
-
-
-#section-a .content-body {
-    grid-column: 3/11;
+    color: rgba(100, 100, 100, 0.75);
 }
 
 
 /* ------------- Section B / Best Sellers ------------- */
 
 #section-b .content-wrap {
-    grid-column: 2/12;
-    margin-top: 2em;
+    grid-column: 1/13;
+    margin-top: .6rem;
+    padding: 0 5rem;
 }
 
 #section-b .slide-show {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #section-b .card {
@@ -297,26 +321,30 @@ main {
     flex-direction: column;
 }
 
-#section-b .slide-show .btn {
-    font-size: 8vw;
-    color: #DCE9EC;
-    margin-top: 6vw;
+#section-b .control {
+    font-size: 2.5rem;
+    color: #DCE9EC;   
+    margin: 0;
+    margin-top: 3rem;
+    margin-bottom: 7rem;
 }
 
 #section-b .image-wrap {
     border-radius: 50%;
     background-color: rgb(255, 168, 178);
-    width: 25vw;
-    height: 25vw;
-    padding: 1vw;
+    width: 8rem;
+    height: 8rem;
+    padding: .7rem;
 }
 
 #section-b .clickable-image {
-    border: .1px solid #00000000;
-    /*IDK why but this is needed for roundness*/
+    padding: .1rem;
+    /*Padding needed to center idk why*/
+    width: 25rem;
 }
 
-#section-b .back-hearts {
+
+#section-b .fa-heart {
     color: red;
 }
 
@@ -325,43 +353,60 @@ main {
 
 
 #section-c .content-wrap {
-    grid-column: 3/11;
+    grid-column: 1/13;
 }
 
-#section-c video {
-    background-color: rgb(93, 77, 77);
-    width: 64vw;
-    height: 48vw;
+.customize-toys {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+
+.customize-toys .customize-video {
+    grid-column: 1/13;
+    grid-row: 1/5;
+    background-color: rgba(145, 187, 204, 0.844);
+    z-index: -1;
+    width: 100%;
+    height: 60vw;
+}
+
+.customize-toys .video-content{
+    grid-column: 1/13;
+    grid-row: 5/6;
 }
 
 #section-c .btn {
-    border-radius: 1vw;
-    color: black;
+    border-radius: .5rem;
     font-weight: bold;
-    margin: 0 2em;
-    padding: .5em;
-    border: .2vw solid darkblue;
+    padding: .25rem .75rem;
+    border: .1rem solid;
 }
 
 #section-c .card {
-    border: .5vw solid #A9DAE6;
-    border-radius: 2vw;
-    margin: 2vw 0;
-    padding: 2vw;
+    border: .2rem solid #A9DAE6;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 2rem 1rem;
 }
 
+#section-c .card img {
+    height: 60vw;
+}
+
+
 #section-c .card .btn {
-    padding: .8em;
+    padding: .4rem;
     border: 0;
     background-color: #A9DAE6;
     color: white;
 }
 
-
 /* ------------- Section D / Visit Us - Sign In ------------- */
 
 #section-d .content-wrap {
     grid-column: 1/13;
+    padding-bottom: 2.5rem;
 }
 
 #section-d .social-media-icons li {
@@ -370,19 +415,20 @@ main {
 
 #section-d .social-media-icons .btn {
     border-radius: 50%;
-    padding: 1.5vw;
-    height: 3vw;
-    width: 3vw;
-    border: .5vw solid #3A71AA;
-    color: #3A71AA;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
     text-align: center;
+    border: .1rem solid #3A71AA;
+    color: #3A71AA;
 }
 
 #section-d .in-site .btn {
-    border-radius: 2vw;
+    border-radius: .8rem;
     color: white;
-    padding: 2vw 4vw;
-    margin: .5vw;
+    padding: .8rem;
+    margin: .2rem;
     font-weight: bold;
 }
 
@@ -397,43 +443,50 @@ main {
 /* ------------- Epilogue ------------- */
 
 #epilogue .content-wrap{    
-    grid-column: 1/13;
+    grid-column: 1/13;            
+    background-color: #3A71AA;
+}
+
+#epilogue .content-wrap *{
+    color: white;
+}
+
+#epilogue p{
+    padding-top: 0;
 }
 
 #epilogue .nav {
-    background-color: #3A71AA;
+    margin: 0;
 }
 
 #epilogue .btn {
     display: block;
-    margin: 0 3vw;
-    padding: 3vw;
+    margin: 0 1rem;
+    padding: 1rem;
     border: none;
-    border-bottom: 1px solid rgba(198, 243, 243, 0.496);
-    color: white;
+    border-bottom: .1rem solid rgba(198, 243, 243, 0.496);
+}
+
+#epilogue .copyright-wrap {
+    background-color: transparent;
 }
 
 
 /* ------------- Media Queries ------------- */
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 650px) {
 
     /* ------------- Desktop Core Styles ------------- */
-    
-    body * {
-        font-size: 1.5vw;
+    html {
+        font-size: 1.9vw;
     }
 
-    main {
-        margin: 0;
-    }
-
-    .social-media-icons * {
-        font-size: 3vw;
+    section {
+        margin: 0 3rem;
     }
 
     h2, h3 {
-        font-size: 2.6vw;
+        font-size: 1.5rem;
     }
 
     .desktop-only {
@@ -446,31 +499,39 @@ main {
         display: none;
     }
 
-    #showcase {
-        padding: 0 10vw;
+    header {    
+        border-bottom: .2rem solid rgba(246, 89, 107, 0.96); 
+    }
+
+    #showcase {        
+        grid-template-columns: repeat(12, 3.5rem);
         grid-template-areas :
-        ".  lg lg lg lg sc sc sc sc sc cr . "
-        ".  lg lg lg lg .  .  .  .  .  .  . "
-        ".  lg lg lg lg .  sb sb sb sb sb . "
-        ".  lg lg lg lg .  of of of of of . "
-        ".  pn pn pn pn pn pn pn pn pn pn . ";
-        border-bottom: .3vw solid rgba(246, 89, 107, 0.96);
+        "lg lg lg lg lg sc sc sc sc sc sc cr"
+        "lg lg lg lg lg sc sc sc sc sc sc cr"
+        "lg lg lg lg lg .  sb sb sb sb sb sb"
+        "lg lg lg lg lg .  of of of of of of"
+        "pn pn pn pn pn pn pn pn pn pn pn pn";       
+    }
+
+    #showcase * {
+        color: #3A71AA;
     }
 
     #showcase .logo-wrap {
-        margin-right: 1vw;
+        margin-right: .5em;
     }
 
     #showcase .offer-wrap{
         display: flex;
         background-color: transparent;        
-        margin-bottom: 1vw;
-        
+        margin-bottom: .5em;
     }
 
-    #showcase .offer-wrap *{
-        font-size: 1.4vw;
-        color: #3A71AA;
+    #showcase .offer{
+        font-size: .8rem;
+        width: 100%;
+        display: block;
+        text-align: right;
     }
 
 
@@ -483,8 +544,12 @@ main {
 
     #showcase .primary-nav li{ 
         border: none;
-        border-radius: 2px;       
+        border-radius: .2rem .2rem 0 0;       
         background-color: #3A71AA;
+    }
+
+    #showcase .primary-nav .btn{ 
+        padding: .1em .5em
     }
 
     #showcase .primary-nav li :hover{       
@@ -494,7 +559,7 @@ main {
     #showcase .primary-nav a{      
         color: white;          
         padding: 0;         
-        width: 8vw;
+        width: 5em;
         font-weight: 200;    
         margin: 0;
     }
@@ -506,7 +571,8 @@ main {
     }
 
     #showcase .search-bar{
-        padding: 0;
+        padding: 0;     
+        height: 1.5em;
         grid-area: sb;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -523,25 +589,27 @@ main {
     #showcase .search-bar input {
         margin: 0;
         grid-column: 3/13;
-        border-radius: 0 .5vw .5vw 0;
+        border-radius: 0 5px 5px 0;
         border: 1px solid #b0aeae;
         background: #ffffff;
     }
 
     #showcase .cart-wrap {
-        margin-top: 1.4vw;
-        margin-right: -2.5vw;
+        margin: 0;
     }
 
     #showcase .cart {
-        font-size: 1.5vw;
+        font-size: 1rem;
+        margin-top: 1rem;
         padding: .5vw;
+        color: white;       
+        float: right;
     }
 
     /* ------------- Section A ------------- */
 
-    #section-a *{
-        font-size: 1.9vw;
+    #section-a * {
+        font-size: 1.3rem;
         font-weight: bold;
     }
 
@@ -553,11 +621,33 @@ main {
         display: none;
     }
 
+    #section-a .bg-image {
+        background-position: 50% 50%;
+        padding-top: 20rem;
+    }
+
+    #section-a .bg-image .shop-now {
+        padding: 0;
+        grid-column: 8/10;
+        grid-row: 8/10;
+    }
+
+    #section-a .desktop-only {
+        display: inline-block;
+        grid-column: 2/8;
+        grid-row: 6/12;
+    }
+
+
     #section-a .desktop-only p {
+        font-size: 1.5rem;
         padding: 0;
     }
 
     /* ------------- Section B  ------------- */
+    #section-b .content-wrap {
+        padding: 0;
+    }
     
     #section-b .slide-show {
         display: flex;
@@ -567,32 +657,12 @@ main {
     
     #section-b .slide-show .card {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 2.5vw 1vw 1vw 1vw;
     }
     
-    #section-b .slide-show .card * {
-        font-size: 1.7vw;
-    }
-    
-    #section-b .card .best-seller-rating * {
-        font-size: 1.5vw;
-    }
-    
-    #section-b .slide-show .btn {
-        margin-top: 3vw;
-    }
-    
-    #section-b .slide-show .card-body {
-        width: 10vw;
-    }
-    
-    #section-b .image-wrap {
-        width: 12vw;
-        height: 12vw;
-        padding: 2vw;
+    #section-b .slide-show .control {
+        margin-top: 1em;
     }
 
      /* ------------- Section C  ------------- */
@@ -601,29 +671,34 @@ main {
         padding-top: 0;
     }
 
-    #section-c .customize-video{
-        width: 64vw;
-        height: 48vw;
+    .customize-toys .customize-video{
+        grid-row: 1/6;
+        height: 20em;
+    }
+
+    .customize-toys .video-content {
+        grid-column: 2/5;
+        grid-row: 3/5;
     }
      
-     #section-c .card {
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-         grid-template-rows: 1fr 1fr 1fr;
-         height: 25vw;
-     }
+    #section-c .card {
+        display: grid;
+        grid-template-columns: 1fr .1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 15em;
+    }
 
-     #section-c .card img {  
-        height: 20vw;       
+    #section-c .card img {  
+        height: 10em;       
         grid-column: 1/2;
         grid-row: 1/4;
         height: 100%;
     }
 
      #section-c .card .card-content {
-         padding: 0 2vw;
-         grid-column: 2/3;
-         grid-row: 2/3;
+        padding: 0 1em;
+        grid-column: 3/4;
+        grid-row: 2/3;
      }
 
      #section-c .opposite-card .card-content {
@@ -631,12 +706,17 @@ main {
     }
 
     #section-c .opposite-card img {
-        grid-column: 2/3;
+        grid-column: 3/4;
     }
 
     /* ------------- Section D / Visit Us - Sign In ------------- */
 
-    #section-d .content-wrap {
+    #section-d {
+        margin: 0;
+    }
+    
+    #section-d .content-wrap {        
+        padding-bottom: 0;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(auto-fill, 1fr);
@@ -648,7 +728,7 @@ main {
     }
 
     #section-d .content-body {
-        padding: 3vw 2vw;
+        padding: 2rem .5rem;
         background-color: rgba(213, 213, 213, 0.756);
         border-radius: 3vw;
         grid-column: 8/11;
@@ -662,95 +742,111 @@ main {
 
     #section-d .social-media-icons .btn {
         border-radius: 50%;
-        margin: 0 .2vw;
-        padding: .5vw;
-        font-size: 1.5vw;
-        height: 1.5vw;
-        width: 1.5vw;
-        border: .3vw solid #3A71AA;
+        margin: .2rem .1rem;
+        padding: .4rem;
+        font-size: 1.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+        line-height: 1.2rem;
+        border: .2rem solid #3A71AA;
         color: #3A71AA;
         text-align: center;
     }
     
     #section-d .in-site .btn {
-        border-radius: 1vw;
+        border-radius: .5rem;
         color: white;
-        padding: 1vw;
-        margin: .5vw;
+        padding: .5rem;
+        margin: .5rem;
         font-weight: bold;
     }
 
     /* ------------- Epilogue ------------- */
-    
-    #epilogue {        
+
+    #epilogue .content-wrap {        
         background-color: #A9DAE6;
     }
 
-    #epilogue *{
+    #epilogue .content-wrap * {        
+        color:#3A71AA;     
         text-align: left;
-        margin: 0;
-        color: #3A71AA;
-        
-    }
-
-    #epilogue p{
-        padding-top: 0;
-    }
-
-    #epilogue li{      
-        margin: 0;
         padding: 0;
-        width: 17vw;
-    }
-
-    #epilogue li *{      
-        padding: 1vw 0 1vw 2vw;
         margin: 0;
     }
 
-    #epilogue .nav-bar-wrap {        
-        background-color:#3A71AA;
+    #epilogue .content-body {
+        padding: .2em 3em;
     }
-    
-    #epilogue .nav-bar {
+
+    #epilogue .content-body li * {
+        padding: .4rem;
+    }
+
+    #epilogue ul{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between;        
     }
 
-    #epilogue .nav-wrap {
-        background-color: #A9DAE6;
-    }
-
-    #epilogue .nav {
-        margin-top: 0;
-        display: flex;
-        justify-content: space-between;
-        background-color: #A9DAE6;
-    }
-
-    #epilogue .desktop-only {
+    #epilogue li{    
         display: flex;
         flex-direction: column;
-        padding: 0;
-        margin: 0;
+        width: 10rem;
     }
 
-    #epilogue .desktop-only a{
-        margin-bottom: 1vw;
+    #epilogue .help{        
+        width: 6rem;
     }
 
-    #epilogue .btn {
-        padding: 1vw 0 1vw 2vw;
-        margin: 0;
-        border: none;
+    #epilogue .nav-wrap {        
+        background-color:#3A71AA;
     }
 
-    #epilogue .copyright-wrap {        
+    #epilogue .nav-wrap a {        
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    #epilogue .secondary-nav-wrap {
         display: block;
     }
 
+    #epilogue .btn {
+        border: none;
+    }
+
+    #epilogue .copyright-wrap {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
     #epilogue .copyright {
-        font-weight: bold;      
-        color: #3A71AA;
+        font-weight: bold;
+        padding-left: .4em;
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+    html {
+        font-size: 1.6vw;
+    }
+
+    section {
+        margin: 0 10vw;
+    }
+
+    #epilogue .content-body {
+        padding: .2em 8em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 1.35vw;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    html {
+        font-size: 1.2vw;
     }
 }
