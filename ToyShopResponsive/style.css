@@ -1,21 +1,35 @@
     /* ------------- Core Styles ------------- */
 
-html { 
-    font-size: 3vw;
+html {
+    /*Min Supported Device Width 320PX*/
+    font-size: 12px;
     /* minfontpx + (max - minfont) x (100vw - minscrpx) / (max - minscr) */
     font-family: Helvetica, sans-serif;    
     line-height: 1.5;    
     text-align: center;
 }
 
+.grid {   
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.content-wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-body{
+    width: 27rem;
+    margin: 0 auto;
+}
+
 body {
     margin: 0;
     padding: 0;
-}
-
-
-section {
-    margin: 0 1rem;
+    
+    
+    background-color: rgb(255, 248, 248);
 }
 
 div {  
@@ -65,11 +79,6 @@ ul {
     color: rgb(241, 235, 235);
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
 section h2 {   
     display: inline-block;
     color: #3A71AA;  
@@ -94,39 +103,31 @@ section h2 {
 /*--------------------------------------- Header Showcase ---------------------------------------*/
 
 
-header {
-    display: flex;
-    justify-content: center;
-    
-    background-color: rgba(169, 218, 230, 0.796);
-}
-
-#showcase {
-    grid-template-areas: 
-    "of of of of of of of of of of of of"
-    ".  .  .  lg lg lg lg lg lg .  .  . "
-    "hb hb .  lg lg lg lg lg lg .  cr cr"
-    ".  .  .  lg lg lg lg lg lg .  .  . "
-    "nm nm nm nm nm nm nm nm nm nm nm nm";
-    text-align: center;
-}
-
 #showcase * {       
     color: rgba(255, 255, 255, 0.857);
 }
 
 #showcase .offer-wrap {
+    padding: .2rem 0;
     background-color: #3A71AA;
-    padding: .3rem 0;
-    grid-area: of;
 }
 
-#showcase .offer {
-    font-size: 0.9rem;
+#showcase .middle-wrap {
+    background-color: rgba(169, 218, 230, 0.796);
+}
+
+#showcase .middle-wrap .content-body{
+    grid-template-areas:
+    ".  .  .  lg lg lg lg lg lg .  .  . "
+    "hb hb hb lg lg lg lg lg lg cr cr cr"
+    ".  .  .  lg lg lg lg lg lg .  .  . "
+    "nm nm nm nm nm nm nm nm nm nm nm nm";
+    text-align: center;
 }
 
 #showcase .hamburger-wrap {
     grid-area: hb;
+    padding: 0 2rem;
 }
 
 #showcase .hamburger {
@@ -140,7 +141,7 @@ header {
 }
 
 #showcase .cart-wrap {
-    margin-top: 0.66rem;
+    margin-top: 0.3rem;
     /*Equilizing the cart and hb*/
     grid-area: cr;
 }
@@ -153,38 +154,36 @@ header {
 }
 
 
-/*------ Pop Up Navigation Menu ------*/
+/*------ Pop Up Menu ------*/
 
-#showcase .nav-menu {
-    position: relative;
+#showcase .nav-menu-wrap {
     background-color: rgb(255, 248, 248);
-    z-index: 1;
     grid-area: nm;
     text-align: left;
 }
 
-#showcase .nav-menu li {
+#showcase .nav-menu-wrap li {
     display: block;
-    margin: 0 .66rem;
+    padding: 0;
 }
 
-#showcase .nav-menu li a {
+#showcase .nav-menu-wrap li a {
     padding: .33rem 1rem .33rem .33rem;
     color: #203760;
 }
 
-#showcase .nav-menu .close-search {
+#showcase .nav-menu-wrap .close-search {
     background-color: #3A71AA;
     padding: .66rem 0;
 }
 
-#showcase .nav-menu .close-search a {
+#showcase .nav-menu-wrap .close-search a {
     color: #C6F3F3;
     font-size: 1.33rem;
     text-align: center;
 }
 
-#showcase .nav-menu .search-bar {
+#showcase .nav-menu-wrap .search-bar {
     display: none;
 }
 
@@ -253,31 +252,23 @@ header {
 
 #section-a {
     color: #203760;
-    margin: 0;
-}
-
-#section-a .content-wrap {
-    grid-column: 1/13;
 }
 
 #section-a .bg-image {
-    background: rgba(51, 51, 51, 0.654) url('https://fthmb.tqn.com/9tlru_UIY_vf_5qcI0G7j28S-So=/2250x1500/filters:no_upscale():max_bytes(150000):strip_icc()/fun-learning-games-577929db5f9b58587593c0d1.jpg');
-    background-position: 50% 100%;
+    background: rgba(51, 51, 51, 0.069) url('https://fthmb.tqn.com/9tlru_UIY_vf_5qcI0G7j28S-So=/2250x1500/filters:no_upscale():max_bytes(150000):strip_icc()/fun-learning-games-577929db5f9b58587593c0d1.jpg');
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    padding-top: 16rem;
+    padding-top: 50vw;
     z-index: -1;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(12,auto);
 }
 
 #section-a .bg-image .shop-now {
-    display: inline-block;
-    font-size: .9rem;
-    grid-column: 6/8;
-    padding: .3rem .1rem;
+    font-size: 1rem;
+    grid-column: 5/9;
+    padding: .5em 0;
     font-weight: bold;
     border-radius: 5px;
     border: .08rem solid #203760;
@@ -302,14 +293,12 @@ header {
 /* ------------- Section B / Best Sellers ------------- */
 
 #section-b .content-wrap {
-    grid-column: 1/13;
     margin-top: .6rem;
-    padding: 0 5rem;
 }
 
 #section-b .slide-show {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #section-b .card {
@@ -368,7 +357,7 @@ header {
     background-color: rgba(145, 187, 204, 0.844);
     z-index: -1;
     width: 100%;
-    height: 60vw;
+    height: 20rem;
 }
 
 .customize-toys .video-content{
@@ -391,7 +380,7 @@ header {
 }
 
 #section-c .card img {
-    height: 60vw;
+    height: 20rem;
 }
 
 
@@ -407,6 +396,22 @@ header {
 #section-d .content-wrap {
     grid-column: 1/13;
     padding-bottom: 2.5rem;
+}
+    
+#section-d .content-body {        
+    padding-bottom: 0;   
+    height: 32rem;  
+    grid-template-rows: repeat(12,1fr);
+}
+
+#section-d .image-wrap {
+    grid-column: 1/13;
+    grid-row: 1/8;
+}
+
+#section-d .card {
+    grid-column: 1/13;
+    grid-row: 8/13;
 }
 
 #section-d .social-media-icons li {
@@ -440,9 +445,14 @@ header {
     background-color: #73C3E2;
 }
 
+footer {
+    display:flex;
+    justify-content: space-around;
+}
+
 /* ------------- Epilogue ------------- */
 
-#epilogue .content-wrap{    
+#epilogue .content-wrap{
     grid-column: 1/13;            
     background-color: #3A71AA;
 }
@@ -467,44 +477,67 @@ header {
     border-bottom: .1rem solid rgba(198, 243, 243, 0.496);
 }
 
-#epilogue .copyright-wrap {
-    background-color: transparent;
-}
 
 
 /* ------------- Media Queries ------------- */
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 420px) {
+    html{
+        font-size: 13.85px;
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    html{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    html{
+        font-size: 17px;
+    }
+}
+
+
+@media only screen and (min-width: 670px) {
 
     /* ------------- Desktop Core Styles ------------- */
     html {
-        font-size: 1.9vw;
+        /*font-size: 1.86vw;*/
+        font-size: 12px;
+    }
+
+    .content-body {
+        width: 54rem;
     }
 
     section {
-        margin: 0 3rem;
+        display: flex;
+        justify-content: center;
     }
 
     h2, h3 {
         font-size: 1.5rem;
+    }
+  
+    .mobile-only {
+        display: none;
     }
 
     .desktop-only {
         display: inline-block;
     }
     
-    /* ------------- Header Showcase ------------- */
-    .nav-menu,
-    .hamburger-wrap {
-        display: none;
-    }
+    /* ------------- Header Showcase ------------- */  
 
     header {    
         border-bottom: .2rem solid rgba(246, 89, 107, 0.96); 
+        background-color: rgba(169, 218, 230, 0.796);
     }
 
-    #showcase {        
-        grid-template-columns: repeat(12, 3.5rem);
+    #showcase .content-body {       
         grid-template-areas :
         "lg lg lg lg lg sc sc sc sc sc sc cr"
         "lg lg lg lg lg sc sc sc sc sc sc cr"
@@ -519,12 +552,13 @@ header {
 
     #showcase .logo-wrap {
         margin-right: .5em;
+        grid-area: lg;
     }
 
-    #showcase .offer-wrap{
-        display: flex;
-        background-color: transparent;        
+    #showcase .offer-wrap{       
         margin-bottom: .5em;
+        grid-area: of;
+        background-color: transparent;
     }
 
     #showcase .offer{
@@ -537,13 +571,14 @@ header {
 
     #showcase .primary-nav{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         grid-area: pn;       
         margin: 0;
     }
 
     #showcase .primary-nav li{ 
         border: none;
+        padding: 0 .8rem;
         border-radius: .2rem .2rem 0 0;       
         background-color: #3A71AA;
     }
@@ -596,6 +631,7 @@ header {
 
     #showcase .cart-wrap {
         margin: 0;
+        grid-area: cr;
     }
 
     #showcase .cart {
@@ -616,14 +652,10 @@ header {
     #section-a .content-wrap{
         grid-column: 1/13;
     }
-    
-    #section-a .content-body{ /*For Mobile*/
-        display: none;
-    }
 
     #section-a .bg-image {
         background-position: 50% 50%;
-        padding-top: 20rem;
+        padding-top: 31vw;
     }
 
     #section-a .bg-image .shop-now {
@@ -717,22 +749,26 @@ header {
     
     #section-d .content-wrap {        
         padding-bottom: 0;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(auto-fill, 1fr);
-    }
-
-    #section-d .content-wrap img {
-        grid-column: 1/13;
-        grid-row: 1/13;
+        background: rgba(51, 51, 51, 0.069) url('http://www.shananiganstoyshop.com/img/storeview.jpg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        padding: 2vw 0;
     }
 
     #section-d .content-body {
-        padding: 2rem .5rem;
+        background: none;
+        grid-template-rows: repeat(12,1fr);
+        height: 45rem;
+    }
+
+    #section-d .card {
+        padding: 2rem 0;
         background-color: rgba(213, 213, 213, 0.756);
-        border-radius: 3vw;
-        grid-column: 8/11;
-        grid-row: 3/7;
+        border-radius: 2rem;
+        grid-column: 9/12;
+        grid-row: 5/auto;
         grid-auto-rows: auto;
     }
 
@@ -761,21 +797,24 @@ header {
         font-weight: bold;
     }
 
+    /*-------------- Footer -------------*/
+
     /* ------------- Epilogue ------------- */
 
-    #epilogue .content-wrap {        
-        background-color: #A9DAE6;
-    }
-
-    #epilogue .content-wrap * {        
-        color:#3A71AA;     
-        text-align: left;
-        padding: 0;
-        margin: 0;
+    #epilogue .content-wrap {
+        display: flex;
+        justify-content: center;
     }
 
     #epilogue .content-body {
         padding: .2em 3em;
+    }
+
+    #epilogue .content-body * {        
+        color:#3A71AA;     
+        text-align: left;
+        padding: 0;
+        margin: 0;
     }
 
     #epilogue .content-body li * {
@@ -806,7 +845,7 @@ header {
     }
 
     #epilogue .secondary-nav-wrap {
-        display: block;
+        background-color: #A9DAE6;
     }
 
     #epilogue .btn {
@@ -815,7 +854,8 @@ header {
 
     #epilogue .copyright-wrap {
         padding-top: 1em;
-        padding-bottom: 1em;
+        padding-bottom: 1em;       
+        background-color: #A9DAE6;
     }
 
     #epilogue .copyright {
@@ -825,28 +865,8 @@ header {
 }
 
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 850px) {
     html {
-        font-size: 1.6vw;
-    }
-
-    section {
-        margin: 0 10vw;
-    }
-
-    #epilogue .content-body {
-        padding: .2em 8em;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    html {
-        font-size: 1.35vw;
-    }
-}
-
-@media only screen and (min-width: 1400px) {
-    html {
-        font-size: 1.2vw;
+        font-size: 15px;
     }
 }
