@@ -37,7 +37,7 @@
         </v-layout>  
         <v-layout row wrap class="mt-4 mb-2">
             <v-flex xs12 class="text-xs-center">
-                <h3 class="primary--text"> <b>Join Our Awesome Community!</b> </h3>
+                <h3 class="primary--text"> <b>Join Our Community!</b> </h3>
             </v-flex>
         </v-layout>
         <v-layout v-if="user!==null" row wrap class="mb-2">
