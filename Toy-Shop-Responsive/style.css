@@ -1,0 +1,756 @@
+    /* ------------- Core Styles ------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    background: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-align: center;
+    font-size: 3vw;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2 {
+    margin: 3vw 0 0 0;
+    padding: .3em 0;
+}
+
+h3 {
+    margin: 0;
+    padding: .3em 0;
+}
+
+p {
+    margin: 0;
+    padding: .5em 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+fa {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    color: darkblue;
+    text-decoration: none;
+    padding: .2em;
+    margin: .3em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(255, 72, 72, 0.564);
+    color: rgb(241, 235, 235);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+section h2 {   
+    display: inline-block;
+    color: #3A71AA;  
+    border-bottom: 2px solid #73C3E2;
+    margin-bottom: 1em;
+    padding: 0 7vw;
+}
+
+.desktop-only {
+    display: none;
+}
+
+
+/*--------------------------------------- Header Showcase ---------------------------------------*/
+
+#showcase {
+    grid-template-areas: 
+    "of of of of of of of of of of of of"
+    ".  .  .  lg lg lg lg lg lg .  .  . "
+    "hb hb .  lg lg lg lg lg lg .  cr cr"
+    ".  .  .  lg lg lg lg lg lg .  .  . "
+    "nm nm nm nm nm nm nm nm nm nm nm nm";
+    text-align: center;
+    background-color: rgba(169, 218, 230, 0.796);
+}
+
+#showcase .offer-wrap {
+    background-color: #3A71AA;
+    padding: .3em 0;
+    grid-area: of;
+}
+
+#showcase .offer {
+    color: rgba(255, 255, 255, 0.857);
+    font-size: 2.7vw;
+}
+
+#showcase .hamburger-wrap {
+    grid-area: hb;
+}
+
+#showcase .hamburger {
+    color: #f6596b;
+    font-size: 6vw;
+}
+
+#showcase .logo-wrap {
+    margin: .5em 0;
+    grid-area: lg;
+}
+
+#showcase .cart-wrap {
+    margin-top: 2vw;
+    /*Equilizing the cart and hb*/
+    grid-area: cr;
+}
+
+#showcase .cart {
+    color: white;
+    background-color: #F6596B;
+    border-radius: 20%;
+    font-size: 4vw;
+}
+
+
+/*------ Pop Up Navigation Menu ------*/
+
+#showcase .nav-menu {
+    position: relative;
+    background-color: rgb(255, 248, 248);
+    z-index: 1;
+    grid-area: nm;
+    text-align: left;
+}
+
+#showcase .nav-menu li {
+    display: block;
+    margin: 0 2vw;
+}
+
+#showcase .nav-menu li a {
+    padding: 1vw 3vw 1vw 1vw;
+    color: #203760;
+}
+
+
+/*---  Close and Search ---*/
+
+#showcase .nav-menu .close-search {
+    background-color: #3A71AA;
+    padding: 2vw 0;
+}
+
+#showcase .nav-menu .close-search a {
+    color: #C6F3F3;
+    font-size: 4vw;
+    text-align: center;
+}
+
+#showcase .nav-menu .search-bar {
+    display: none;
+}
+
+#showcase .close-search .fa-close {
+    grid-column: 2/3;
+}
+
+#showcase .close-search .fa-search {
+    grid-column: 11/12;
+}
+
+
+/*---  Primary Nav ---*/
+
+#showcase .primary-nav li {
+    border-bottom: .3vw solid rgba(93, 141, 192, 0.919);
+}
+
+#showcase .primary-nav .final-li {
+    border-bottom: .5vw solid rgba(93, 141, 192, 0.919);
+}
+
+#showcase .primary-nav a {
+    font-weight: bold;
+}
+
+#showcase .primary-nav .fa {
+    float: right;
+    padding-left: 3vw;
+    font-size: 4vw;
+    color: rgba(93, 141, 192, 0.919);
+}
+
+
+/*---  Secondary Nav (Currently No Styling Needed) ---*/
+
+
+/*--- Social Media Icons ---*/
+
+#showcase .social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .7vw solid rgba(93, 141, 192, 0.919);
+    padding-bottom: 2vw;
+    margin-bottom: 15vw;
+}
+
+#showcase .social-media-icons .btn {
+    border-radius: 50%;
+    padding: 1vw;
+    height: 4.5vw;
+    width: 4.5vw;
+    font-size: 4vw;
+    border: .5vw solid #3A71AA;
+    color: #3A71AA;
+    text-align: center;
+}
+
+
+/*--------------------------------------- Main --------------------------------------------------*/
+
+main {
+    margin: 0 .5em;
+}
+
+
+/* ------------- Section A / Background Image ------------- */
+
+#section-a {
+    margin-top: 0em;
+    color: #203760;
+}
+
+#section-a .content-wrap {
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
+#section-a .bg-image {
+    background: #333 url('https://s9.postimg.cc/6ipfiwb73/kid-abacus.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 35%;   
+    padding-top: 45%;
+    z-index: -1;
+}
+
+#section-a .bg-image .btn {
+    position: relative;
+    padding: 1vw;
+    border-radius: 1vw;
+    border: 1.5px solid #5679b6;
+}
+
+#section-a .dot {
+    font-size: 3vw;
+    margin: .5vw;
+    color: rgb(213, 213, 213);
+}
+
+#section-a .active-dot {
+    color: rgb(175, 175, 175);
+}
+
+
+#section-a .content-body {
+    grid-column: 3/11;
+}
+
+
+/* ------------- Section B / Best Sellers ------------- */
+
+#section-b .content-wrap {
+    grid-column: 2/12;
+    margin-top: 2em;
+}
+
+#section-b .slide-show {
+    display: flex;
+    justify-content: center;
+}
+
+#section-b .card {
+    display: none;
+}
+
+#section-b #visible-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#section-b .slide-show .btn {
+    font-size: 8vw;
+    color: #DCE9EC;
+    margin-top: 6vw;
+}
+
+#section-b .image-wrap {
+    border-radius: 50%;
+    background-color: rgb(255, 168, 178);
+    width: 25vw;
+    height: 25vw;
+    padding: 1vw;
+}
+
+#section-b .clickable-image {
+    border: .1px solid #00000000;
+    /*IDK why but this is needed for roundness*/
+}
+
+#section-b .back-hearts {
+    color: red;
+}
+
+
+/* ------------- Section C / Feature Toys ------------- */
+
+
+#section-c .content-wrap {
+    grid-column: 3/11;
+}
+
+#section-c video {
+    background-color: rgb(93, 77, 77);
+    width: 64vw;
+    height: 48vw;
+}
+
+#section-c .btn {
+    border-radius: 1vw;
+    color: black;
+    font-weight: bold;
+    margin: 0 2em;
+    padding: .5em;
+    border: .2vw solid darkblue;
+}
+
+#section-c .card {
+    border: .5vw solid #A9DAE6;
+    border-radius: 2vw;
+    margin: 2vw 0;
+    padding: 2vw;
+}
+
+#section-c .card .btn {
+    padding: .8em;
+    border: 0;
+    background-color: #A9DAE6;
+    color: white;
+}
+
+
+/* ------------- Section D / Visit Us - Sign In ------------- */
+
+#section-d .content-wrap {
+    grid-column: 1/13;
+}
+
+#section-d .social-media-icons li {
+    display: inline-block;
+}
+
+#section-d .social-media-icons .btn {
+    border-radius: 50%;
+    padding: 1.5vw;
+    height: 3vw;
+    width: 3vw;
+    border: .5vw solid #3A71AA;
+    color: #3A71AA;
+    text-align: center;
+}
+
+#section-d .in-site .btn {
+    border-radius: 2vw;
+    color: white;
+    padding: 2vw 4vw;
+    margin: .5vw;
+    font-weight: bold;
+}
+
+#section-d .sign-up {
+    background-color: #3A71AA;
+}
+
+#section-d .log-in {
+    background-color: #73C3E2;
+}
+
+/* ------------- Epilogue ------------- */
+
+#epilogue .content-wrap{    
+    grid-column: 1/13;
+}
+
+#epilogue .nav {
+    background-color: #3A71AA;
+}
+
+#epilogue .btn {
+    display: block;
+    margin: 0 3vw;
+    padding: 3vw;
+    border: none;
+    border-bottom: 1px solid rgba(198, 243, 243, 0.496);
+    color: white;
+}
+
+
+/* ------------- Media Queries ------------- */
+
+@media only screen and (min-width: 700px) {
+
+    /* ------------- Desktop Core Styles ------------- */
+    
+    body * {
+        font-size: 1.5vw;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    .social-media-icons * {
+        font-size: 3vw;
+    }
+
+    h2, h3 {
+        font-size: 2.6vw;
+    }
+
+    .desktop-only {
+        display: inline-block;
+    }
+    
+    /* ------------- Header Showcase ------------- */
+    .nav-menu,
+    .hamburger-wrap {
+        display: none;
+    }
+
+    #showcase {
+        padding: 0 10vw;
+        grid-template-areas :
+        ".  lg lg lg lg sc sc sc sc sc cr . "
+        ".  lg lg lg lg .  .  .  .  .  .  . "
+        ".  lg lg lg lg .  sb sb sb sb sb . "
+        ".  lg lg lg lg .  of of of of of . "
+        ".  pn pn pn pn pn pn pn pn pn pn . ";
+        border-bottom: .3vw solid rgba(246, 89, 107, 0.96);
+    }
+
+    #showcase .logo-wrap {
+        margin-right: 1vw;
+    }
+
+    #showcase .offer-wrap{
+        display: flex;
+        background-color: transparent;        
+        margin-bottom: 1vw;
+        
+    }
+
+    #showcase .offer-wrap *{
+        font-size: 1.4vw;
+        color: #3A71AA;
+    }
+
+
+    #showcase .primary-nav{
+        display: flex;
+        justify-content: space-between;
+        grid-area: pn;       
+        margin: 0;
+    }
+
+    #showcase .primary-nav li{ 
+        border: none;
+        border-radius: 2px;       
+        background-color: #3A71AA;
+    }
+
+    #showcase .primary-nav li :hover{       
+        background-color:rgba(246, 89, 107, 0.96);
+    }
+
+    #showcase .primary-nav a{      
+        color: white;          
+        padding: 0;         
+        width: 8vw;
+        font-weight: 200;    
+        margin: 0;
+    }
+
+    #showcase .secondary-nav{
+        display: flex;
+        justify-content: space-between;
+        grid-area: sc;
+    }
+
+    #showcase .search-bar{
+        padding: 0;
+        grid-area: sb;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #showcase .search-bar select {
+        margin: 0;
+        grid-column: 2/3;
+        border: 1px solid #969696;
+        background: #d7d7d7;
+        color: rgb(114, 114, 114);
+    }
+
+    #showcase .search-bar input {
+        margin: 0;
+        grid-column: 3/13;
+        border-radius: 0 .5vw .5vw 0;
+        border: 1px solid #b0aeae;
+        background: #ffffff;
+    }
+
+    #showcase .cart-wrap {
+        margin-top: 1.4vw;
+        margin-right: -2.5vw;
+    }
+
+    #showcase .cart {
+        font-size: 1.5vw;
+        padding: .5vw;
+    }
+
+    /* ------------- Section A ------------- */
+
+    #section-a *{
+        font-size: 1.9vw;
+        font-weight: bold;
+    }
+
+    #section-a .content-wrap{
+        grid-column: 1/13;
+    }
+    
+    #section-a .content-body{ /*For Mobile*/
+        display: none;
+    }
+
+    #section-a .desktop-only p {
+        padding: 0;
+    }
+
+    /* ------------- Section B  ------------- */
+    
+    #section-b .slide-show {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    
+    #section-b .slide-show .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 2.5vw 1vw 1vw 1vw;
+    }
+    
+    #section-b .slide-show .card * {
+        font-size: 1.7vw;
+    }
+    
+    #section-b .card .best-seller-rating * {
+        font-size: 1.5vw;
+    }
+    
+    #section-b .slide-show .btn {
+        margin-top: 3vw;
+    }
+    
+    #section-b .slide-show .card-body {
+        width: 10vw;
+    }
+    
+    #section-b .image-wrap {
+        width: 12vw;
+        height: 12vw;
+        padding: 2vw;
+    }
+
+     /* ------------- Section C  ------------- */
+
+    #section-c .video-title{
+        padding-top: 0;
+    }
+
+    #section-c .customize-video{
+        width: 64vw;
+        height: 48vw;
+    }
+     
+     #section-c .card {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr;
+         height: 25vw;
+     }
+
+     #section-c .card img {  
+        height: 20vw;       
+        grid-column: 1/2;
+        grid-row: 1/4;
+        height: 100%;
+    }
+
+     #section-c .card .card-content {
+         padding: 0 2vw;
+         grid-column: 2/3;
+         grid-row: 2/3;
+     }
+
+     #section-c .opposite-card .card-content {
+        grid-column: 1/2;
+    }
+
+    #section-c .opposite-card img {
+        grid-column: 2/3;
+    }
+
+    /* ------------- Section D / Visit Us - Sign In ------------- */
+
+    #section-d .content-wrap {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+    }
+
+    #section-d .content-wrap img {
+        grid-column: 1/13;
+        grid-row: 1/13;
+    }
+
+    #section-d .content-body {
+        padding: 3vw 2vw;
+        background-color: rgba(213, 213, 213, 0.756);
+        border-radius: 3vw;
+        grid-column: 8/11;
+        grid-row: 3/7;
+        grid-auto-rows: auto;
+    }
+
+    #section-d .social-media-icons {
+        margin: 0;
+    }
+
+    #section-d .social-media-icons .btn {
+        border-radius: 50%;
+        margin: 0 .2vw;
+        padding: .5vw;
+        font-size: 1.5vw;
+        height: 1.5vw;
+        width: 1.5vw;
+        border: .3vw solid #3A71AA;
+        color: #3A71AA;
+        text-align: center;
+    }
+    
+    #section-d .in-site .btn {
+        border-radius: 1vw;
+        color: white;
+        padding: 1vw;
+        margin: .5vw;
+        font-weight: bold;
+    }
+
+    /* ------------- Epilogue ------------- */
+    
+    #epilogue {        
+        background-color: #A9DAE6;
+    }
+
+    #epilogue *{
+        text-align: left;
+        margin: 0;
+        color: #3A71AA;
+        
+    }
+
+    #epilogue p{
+        padding-top: 0;
+    }
+
+    #epilogue li{      
+        margin: 0;
+        padding: 0;
+        width: 17vw;
+    }
+
+    #epilogue li *{      
+        padding: 1vw 0 1vw 2vw;
+        margin: 0;
+    }
+
+    #epilogue .nav-bar-wrap {        
+        background-color:#3A71AA;
+    }
+    
+    #epilogue .nav-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #epilogue .nav-wrap {
+        background-color: #A9DAE6;
+    }
+
+    #epilogue .nav {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: #A9DAE6;
+    }
+
+    #epilogue .desktop-only {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    #epilogue .desktop-only a{
+        margin-bottom: 1vw;
+    }
+
+    #epilogue .btn {
+        padding: 1vw 0 1vw 2vw;
+        margin: 0;
+        border: none;
+    }
+
+    #epilogue .copyright-wrap {        
+        display: block;
+    }
+
+    #epilogue .copyright {
+        font-weight: bold;      
+        color: #3A71AA;
+    }
+}
