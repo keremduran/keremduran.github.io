@@ -58,4 +58,5 @@ export default new Router({
       redirect: {name: 'Home'}
     }
   ],
+  mode: 'hash'
 })
