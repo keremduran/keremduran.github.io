@@ -12,7 +12,7 @@ import AuthGuard from './auth-guard'
 Vue.use(Router)
 
 export default new Router({
-  base: '/vmeetup/dist',
+  base: '/vmeetup',
   routes: [
     {
       path: '',
