@@ -111,7 +111,7 @@
 export default {
     data () {
         return {
-            password: "password"
+            
         }
     },
     computed: {

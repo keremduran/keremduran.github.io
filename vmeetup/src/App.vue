@@ -33,7 +33,7 @@
         @click.stop="sideNav = !sideNav">
       </v-toolbar-side-icon>   
       <v-toolbar-title class="px-2">
-        <router-link to="/" tag="span" style="curl" :style="{cursor: 'pointer'}">
+        <router-link :to="{name: 'Home'}" tag="span" style="curl" :style="{cursor: 'pointer'}">
           <i>BamBamMeetup</i>
         </router-link>
       </v-toolbar-title>             
@@ -50,7 +50,7 @@
         <v-btn 
           flat
           v-if="userSignedIn"
-          to="/signin"
+          :to="{name: 'Signin'}"
           @click="onLogout">
           <v-icon dark left >exit_to_app</v-icon>
           Logout
@@ -77,12 +77,12 @@ export default {
         { 
           icon: "face", 
           title: "Sign Up", 
-          link: "/signup" 
+          link: {name: 'Signup'} 
         },
         { 
           icon: "lock_open", 
           title: "Sign In", 
-          link: "/signin"
+          link: {name: 'Signin'} 
         }
       ];
       if (this.userSignedIn) {
@@ -90,17 +90,17 @@ export default {
           {
             icon: "supervisor_account",
             title: "Explore Meetups",
-            link: "/meetups"
+            link: {name: 'Meetups'}
           },
           {
             icon: "room",
             title: "Organize Meetup",
-            link: "/meetup/new"
+            link: {name: 'CreateMeetup'}
           },
           {
             icon: "person",
             title: "Profile",
-            link: "/profile/"
+            link: {name: 'Profile'}
           },
         ];
       }

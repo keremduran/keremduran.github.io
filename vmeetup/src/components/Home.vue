@@ -42,16 +42,16 @@
         </v-layout>
         <v-layout v-if="user!==null" row wrap class="mb-2">
             <v-flex xs12 sm6 class="text-sm-right text-xs-center">
-                <v-btn router to="/meetups" class="primary" large>Explore Meetups</v-btn>
+                <v-btn router :to="{name: 'Meetups'}" class="primary" large>Explore Meetups</v-btn>
             </v-flex>
             <v-flex  xs12 sm6 class="text-sm-left text-xs-center">
-                <v-btn router to="/meetup/new" class="primary" large>Organize Meetup</v-btn>
+                <v-btn router :to="{name: 'CreateMeetup'}" class="primary" large>Organize Meetup</v-btn>
             </v-flex>
         </v-layout>
         <!-- Guests won't see the Organize Meetups button -->
         <v-layout v-if="user===null" row wrap class="mb-2">
             <v-flex xs12 sm6 offset-sm3 class="text-xs-center">
-                <v-btn router to="/meetups" class="primary" large>Explore Meetups</v-btn>
+                <v-btn router :to="{name: 'Meetups'}" class="primary" large>Explore Meetups</v-btn>
             </v-flex>   
         </v-layout>     
     </v-container>

@@ -12,10 +12,10 @@ import AuthGuard from './auth-guard'
 Vue.use(Router)
 
 export default new Router({
-  base: '/vmeetup',
+  base: '/vmeetup/dist',
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'Home',
       component: Home
     },
@@ -51,6 +51,11 @@ export default new Router({
       path: '/signin',
       name: 'Signin',
       component: Signin
+    },
+    { 
+      path: '*',
+      component: Home,
+      redirect: {name: 'Home'}
     }
   ],
   mode: 'history'
