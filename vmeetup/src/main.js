@@ -51,6 +51,7 @@ new Vue({
       if(user !== null){
         this.$store.dispatch('autoSignIn', user)  
         this.$store.dispatch('fetchUserData')
+        this.$router.push({name: "Home"})
       }
     })
     this.$store.dispatch('loadMeetups')
