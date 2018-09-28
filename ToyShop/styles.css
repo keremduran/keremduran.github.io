@@ -106,12 +106,16 @@ header>.searchBarDiv {
 .navLink>div {
     background: #3a71aa;
     color: white;
-    padding: .5em;
+    padding: 3px;
     margin: 0 3px -10px 0;
 }
 
 .navLink>div:hover {
     background-color: rgb(247, 75, 75);
+}
+
+.emptyDiv {
+    background: white;
 }
 
 @media only screen and (max-width: 735px) {

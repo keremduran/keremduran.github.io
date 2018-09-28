@@ -1,0 +1,872 @@
+    /* ------------- Core Styles ------------- */
+
+html {
+    /*Min Supported Device Width 320PX*/
+    font-size: 12px;
+    /* minfontpx + (max - minfont) x (100vw - minscrpx) / (max - minscr) */
+    font-family: Helvetica, sans-serif;    
+    line-height: 1.5;    
+    text-align: center;
+}
+
+.grid {   
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.content-wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-body{
+    width: 27rem;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    
+    background-color: rgb(255, 248, 248);
+}
+
+div {  
+    color: #203760;
+}
+
+a {    
+    text-decoration: none;
+    color: #203760;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2 {
+    margin: 1rem 0 0 0;
+    padding: .3rem 0;
+}
+
+h3 {
+    margin: 0;
+    padding: .3rem 0;
+}
+
+p {
+    margin: 0;
+    padding: .5rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(255, 72, 72, 0.564);
+    color: rgb(241, 235, 235);
+}
+
+section h2 {   
+    display: inline-block;
+    color: #3A71AA;  
+    border-bottom: 1px solid #73C3E2;
+    margin-bottom: 1rem;
+    padding: 0 2.3rem;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.image-wrap {           
+    overflow: hidden;
+}
+
+.social-media-icons .btn {
+    text-align: center;   
+}
+
+
+/*--------------------------------------- Header Showcase ---------------------------------------*/
+
+
+#showcase * {       
+    color: rgba(255, 255, 255, 0.857);
+}
+
+#showcase .offer-wrap {
+    padding: .2rem 0;
+    background-color: #3A71AA;
+}
+
+#showcase .middle-wrap {
+    background-color: rgba(169, 218, 230, 0.796);
+}
+
+#showcase .middle-wrap .content-body{
+    grid-template-areas:
+    ".  .  .  lg lg lg lg lg lg .  .  . "
+    "hb hb hb lg lg lg lg lg lg cr cr cr"
+    ".  .  .  lg lg lg lg lg lg .  .  . "
+    "nm nm nm nm nm nm nm nm nm nm nm nm";
+    text-align: center;
+}
+
+#showcase .hamburger-wrap {
+    grid-area: hb;
+    padding: 0 2rem;
+}
+
+#showcase .hamburger {
+    color: #f6596b;
+    font-size: 2rem;
+}
+
+#showcase .logo-wrap {
+    margin: .5rem 0;
+    grid-area: lg;
+}
+
+#showcase .cart-wrap {
+    margin-top: 0.3rem;
+    /*Equilizing the cart and hb*/
+    grid-area: cr;
+}
+
+#showcase .cart {
+    background-color: #F6596B;
+    border-radius: 20%;
+    font-size: 1.33rem;
+    padding: .16rem;
+}
+
+
+/*------ Pop Up Menu ------*/
+
+#showcase .nav-menu-wrap {
+    background-color: rgb(255, 248, 248);
+    grid-area: nm;
+    text-align: left;
+}
+
+#showcase .nav-menu-wrap li {
+    display: block;
+    padding: 0;
+}
+
+#showcase .nav-menu-wrap li a {
+    padding: .33rem 1rem .33rem .33rem;
+    color: #203760;
+}
+
+#showcase .nav-menu-wrap .close-search {
+    background-color: #3A71AA;
+    padding: .66rem 0;
+}
+
+#showcase .nav-menu-wrap .close-search a {
+    color: #C6F3F3;
+    font-size: 1.33rem;
+    text-align: center;
+}
+
+#showcase .nav-menu-wrap .search-bar {
+    display: none;
+}
+
+#showcase .close-search .fa-close {
+    grid-column: 2/3;
+}
+
+#showcase .close-search .fa-search {
+    grid-column: 11/12;
+}
+
+
+/*---  Menu Primary Nav ---*/
+
+#showcase .primary-nav li {
+    border-bottom: .1rem solid rgba(93, 141, 192, 0.919);
+}
+
+#showcase .primary-nav .final-li {
+    border-bottom: .15rem solid rgba(93, 141, 192, 0.919);
+}
+
+#showcase .primary-nav a {
+    font-weight: bold;
+}
+
+#showcase .primary-nav .fa {
+    float: right;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: 1.33rem;
+    color: rgba(93, 141, 192, 0.919);
+}
+
+
+/*---  Menu Secondary Nav (Currently No Styling Needed) ---*/
+
+
+/*--- Social Media Icons ---*/
+
+#showcase .social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .2rem solid rgba(93, 141, 192, 0.919);
+    padding-bottom: .66rem;
+    margin-bottom: 5rem;
+}
+
+#showcase .social-media-icons .btn { 
+    border-radius: 50%;
+    margin: .33rem;
+    height: 2.1rem;
+    width: 2.1rem;   
+    line-height: 2.1rem;
+    font-size: 1.33rem;      
+    color: #3A71AA; 
+    border: .16rem solid #3A71AA;
+}
+
+
+/*--------------------------------------- Main --------------------------------------------------*/
+
+
+/* ------------- Section A / Background Image ------------- */
+
+#section-a {
+    color: #203760;
+}
+
+#section-a .bg-image {
+    background: rgba(51, 51, 51, 0.069) url('https://fthmb.tqn.com/9tlru_UIY_vf_5qcI0G7j28S-So=/2250x1500/filters:no_upscale():max_bytes(150000):strip_icc()/fun-learning-games-577929db5f9b58587593c0d1.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 50vw;
+    z-index: -1;
+    display: grid;
+}
+
+#section-a .bg-image .shop-now {
+    font-size: 1rem;
+    grid-column: 5/9;
+    padding: .5em 0;
+    font-weight: bold;
+    border-radius: 5px;
+    border: .08rem solid #203760;
+}
+
+#section-a .dots {
+    grid-column: 6/8;
+    grid-row: 12/13;
+}
+
+#section-a .dot {
+    font-size: 1rem;
+    margin: .15rem;
+    color: rgba(100, 100, 100, 0.30);
+}
+
+#section-a .active-dot {
+    color: rgba(100, 100, 100, 0.75);
+}
+
+
+/* ------------- Section B / Best Sellers ------------- */
+
+#section-b .content-wrap {
+    margin-top: .6rem;
+}
+
+#section-b .slide-show {
+    display: flex;
+    justify-content: space-around;
+}
+
+#section-b .card {
+    display: none;
+}
+
+#section-b #visible-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#section-b .control {
+    font-size: 2.5rem;
+    color: #DCE9EC;   
+    margin: 0;
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+}
+
+#section-b .image-wrap {
+    border-radius: 50%;
+    background-color: rgb(255, 168, 178);
+    width: 8rem;
+    height: 8rem;
+    padding: .7rem;
+}
+
+#section-b .clickable-image {
+    padding: .1rem;
+    /*Padding needed to center idk why*/
+    width: 25rem;
+}
+
+
+#section-b .fa-heart {
+    color: red;
+}
+
+
+/* ------------- Section C / Feature Toys ------------- */
+
+
+#section-c .content-wrap {
+    grid-column: 1/13;
+}
+
+.customize-toys {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+
+.customize-toys .customize-video {
+    grid-column: 1/13;
+    grid-row: 1/5;
+    background-color: rgba(145, 187, 204, 0.844);
+    z-index: -1;
+    width: 100%;
+    height: 20rem;
+}
+
+.customize-toys .video-content{
+    grid-column: 1/13;
+    grid-row: 5/6;
+}
+
+#section-c .btn {
+    border-radius: .5rem;
+    font-weight: bold;
+    padding: .25rem .75rem;
+    border: .1rem solid;
+}
+
+#section-c .card {
+    border: .2rem solid #A9DAE6;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 2rem 1rem;
+}
+
+#section-c .card img {
+    height: 20rem;
+}
+
+
+#section-c .card .btn {
+    padding: .4rem;
+    border: 0;
+    background-color: #A9DAE6;
+    color: white;
+}
+
+/* ------------- Section D / Visit Us - Sign In ------------- */
+
+#section-d .content-wrap {
+    grid-column: 1/13;
+    padding-bottom: 2.5rem;
+}
+    
+#section-d .content-body {        
+    padding-bottom: 0;   
+    height: 32rem;  
+    grid-template-rows: repeat(12,1fr);
+}
+
+#section-d .image-wrap {
+    grid-column: 1/13;
+    grid-row: 1/8;
+}
+
+#section-d .card {
+    grid-column: 1/13;
+    grid-row: 8/13;
+}
+
+#section-d .social-media-icons li {
+    display: inline-block;
+}
+
+#section-d .social-media-icons .btn {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+    border: .1rem solid #3A71AA;
+    color: #3A71AA;
+}
+
+#section-d .in-site .btn {
+    border-radius: .8rem;
+    color: white;
+    padding: .8rem;
+    margin: .2rem;
+    font-weight: bold;
+}
+
+#section-d .sign-up {
+    background-color: #3A71AA;
+}
+
+#section-d .log-in {
+    background-color: #73C3E2;
+}
+
+footer {
+    display:flex;
+    justify-content: space-around;
+}
+
+/* ------------- Epilogue ------------- */
+
+#epilogue .content-wrap{
+    grid-column: 1/13;            
+    background-color: #3A71AA;
+}
+
+#epilogue .content-wrap *{
+    color: white;
+}
+
+#epilogue p{
+    padding-top: 0;
+}
+
+#epilogue .nav {
+    margin: 0;
+}
+
+#epilogue .btn {
+    display: block;
+    margin: 0 1rem;
+    padding: 1rem;
+    border: none;
+    border-bottom: .1rem solid rgba(198, 243, 243, 0.496);
+}
+
+
+
+/* ------------- Media Queries ------------- */
+
+@media only screen and (min-width: 420px) {
+    html{
+        font-size: 13.85px;
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    html{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    html{
+        font-size: 17px;
+    }
+}
+
+
+@media only screen and (min-width: 670px) {
+
+    /* ------------- Desktop Core Styles ------------- */
+    html {
+        /*font-size: 1.86vw;*/
+        font-size: 12px;
+    }
+
+    .content-body {
+        width: 54rem;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+  
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: inline-block;
+    }
+    
+    /* ------------- Header Showcase ------------- */  
+
+    header {    
+        border-bottom: .2rem solid rgba(246, 89, 107, 0.96); 
+        background-color: rgba(169, 218, 230, 0.796);
+    }
+
+    #showcase .content-body {       
+        grid-template-areas :
+        "lg lg lg lg lg sc sc sc sc sc sc cr"
+        "lg lg lg lg lg sc sc sc sc sc sc cr"
+        "lg lg lg lg lg .  sb sb sb sb sb sb"
+        "lg lg lg lg lg .  of of of of of of"
+        "pn pn pn pn pn pn pn pn pn pn pn pn";       
+    }
+
+    #showcase * {
+        color: #3A71AA;
+    }
+
+    #showcase .logo-wrap {
+        margin-right: .5em;
+        grid-area: lg;
+    }
+
+    #showcase .offer-wrap{       
+        margin-bottom: .5em;
+        grid-area: of;
+        background-color: transparent;
+    }
+
+    #showcase .offer{
+        font-size: .8rem;
+        width: 100%;
+        display: block;
+        text-align: right;
+    }
+
+
+    #showcase .primary-nav{
+        display: flex;
+        justify-content: space-around;
+        grid-area: pn;       
+        margin: 0;
+    }
+
+    #showcase .primary-nav li{ 
+        border: none;
+        padding: 0 .8rem;
+        border-radius: .2rem .2rem 0 0;       
+        background-color: #3A71AA;
+    }
+
+    #showcase .primary-nav .btn{ 
+        padding: .1em .5em
+    }
+
+    #showcase .primary-nav li :hover{       
+        background-color:rgba(246, 89, 107, 0.96);
+    }
+
+    #showcase .primary-nav a{      
+        color: white;          
+        padding: 0;         
+        width: 5em;
+        font-weight: 200;    
+        margin: 0;
+    }
+
+    #showcase .secondary-nav{
+        display: flex;
+        justify-content: space-between;
+        grid-area: sc;
+    }
+
+    #showcase .search-bar{
+        padding: 0;     
+        height: 1.5em;
+        grid-area: sb;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #showcase .search-bar select {
+        margin: 0;
+        grid-column: 2/3;
+        border: 1px solid #969696;
+        background: #d7d7d7;
+        color: rgb(114, 114, 114);
+    }
+
+    #showcase .search-bar input {
+        margin: 0;
+        grid-column: 3/13;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid #b0aeae;
+        background: #ffffff;
+    }
+
+    #showcase .cart-wrap {
+        margin: 0;
+        grid-area: cr;
+    }
+
+    #showcase .cart {
+        font-size: 1rem;
+        margin-top: 1rem;
+        padding: .5vw;
+        color: white;       
+        float: right;
+    }
+
+    /* ------------- Section A ------------- */
+
+    #section-a * {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    #section-a .content-wrap{
+        grid-column: 1/13;
+    }
+
+    #section-a .bg-image {
+        background-position: 50% 50%;
+        padding-top: 29vw;
+    }
+
+    #section-a .bg-image .shop-now {
+        padding: 0;
+        grid-column: 8/10;
+        grid-row: 8/10;
+    }
+
+    #section-a .desktop-only {
+        display: inline-block;
+        grid-column: 2/8;
+        grid-row: 6/12;
+    }
+
+
+    #section-a .desktop-only p {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    /* ------------- Section B  ------------- */
+    #section-b .content-wrap {
+        padding: 0;
+    }
+    
+    #section-b .slide-show {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    
+    #section-b .slide-show .card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #section-b .slide-show .control {
+        margin-top: 1em;
+    }
+
+     /* ------------- Section C  ------------- */
+
+    #section-c .video-title{
+        padding-top: 0;
+    }
+
+    .customize-toys .customize-video{
+        grid-row: 1/6;
+        height: 20em;
+    }
+
+    .customize-toys .video-content {
+        grid-column: 2/5;
+        grid-row: 3/5;
+    }
+     
+    #section-c .card {
+        display: grid;
+        grid-template-columns: 1fr .1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 15em;
+    }
+
+    #section-c .card img {  
+        height: 10em;       
+        grid-column: 1/2;
+        grid-row: 1/4;
+        height: 100%;
+    }
+
+     #section-c .card .card-content {
+        padding: 0 1em;
+        grid-column: 3/4;
+        grid-row: 2/3;
+     }
+
+     #section-c .opposite-card .card-content {
+        grid-column: 1/2;
+    }
+
+    #section-c .opposite-card img {
+        grid-column: 3/4;
+    }
+
+    /* ------------- Section D / Visit Us - Sign In ------------- */
+
+    #section-d {
+        margin: 0;
+    }
+    
+    #section-d .content-wrap {        
+        padding-bottom: 0;
+        background: rgba(51, 51, 51, 0.069) url('http://www.shananiganstoyshop.com/img/storeview.jpg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        padding: 2vw 0;
+    }
+
+    #section-d .content-body {
+        background: none;
+        grid-template-rows: repeat(12,1fr);
+        height: 45rem;
+    }
+
+    #section-d .card {
+        padding: 2rem 0;
+        background-color: rgba(213, 213, 213, 0.756);
+        border-radius: 2rem;
+        grid-column: 9/12;
+        grid-row: 5/auto;
+        grid-auto-rows: auto;
+    }
+
+    #section-d .social-media-icons {
+        margin: 0;
+    }
+
+    #section-d .social-media-icons .btn {
+        border-radius: 50%;
+        margin: .2rem .1rem;
+        padding: .4rem;
+        font-size: 1.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+        line-height: 1.2rem;
+        border: .2rem solid #3A71AA;
+        color: #3A71AA;
+        text-align: center;
+    }
+    
+    #section-d .in-site .btn {
+        border-radius: .5rem;
+        color: white;
+        padding: .5rem;
+        margin: .5rem;
+        font-weight: bold;
+    }
+
+    /*-------------- Footer -------------*/
+
+    /* ------------- Epilogue ------------- */
+
+    #epilogue .content-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    #epilogue .content-body {
+        padding: .2em 3em;
+    }
+
+    #epilogue .content-body * {        
+        color:#3A71AA;     
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    #epilogue .content-body li * {
+        padding: .4rem;
+    }
+
+    #epilogue ul{
+        display: flex;
+        justify-content: space-between;        
+    }
+
+    #epilogue li{    
+        display: flex;
+        flex-direction: column;
+        width: 10rem;
+    }
+
+    #epilogue .help{        
+        width: 6rem;
+    }
+
+    #epilogue .nav-wrap {        
+        background-color:#3A71AA;
+    }
+
+    #epilogue .nav-wrap a {        
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    #epilogue .secondary-nav-wrap {
+        background-color: #A9DAE6;
+    }
+
+    #epilogue .btn {
+        border: none;
+    }
+
+    #epilogue .copyright-wrap {
+        padding-top: 1em;
+        padding-bottom: 1em;       
+        background-color: #A9DAE6;
+    }
+
+    #epilogue .copyright {
+        font-weight: bold;
+        padding-left: .4em;
+    }
+}
+
+
+@media only screen and (min-width: 850px) {
+    html {
+        font-size: 15px;
+    }
+}
