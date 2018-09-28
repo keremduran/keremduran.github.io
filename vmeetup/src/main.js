@@ -48,10 +48,12 @@ new Vue({
       }
     )
     firebase.auth().onAuthStateChanged((user) => {
-      if(user !== null){
+      if(user !== null){ 
+        const currentRoute = this.$router.currentRoute.name     
         this.$store.dispatch('autoSignIn', user)  
         this.$store.dispatch('fetchUserData')
-        this.$router.push({name: "Home"})
+        this.$router.push({name: 'Home'})
+        this.$router.push({name: currentRoute})
       }
     })
     this.$store.dispatch('loadMeetups')
