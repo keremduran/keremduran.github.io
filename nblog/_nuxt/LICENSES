@@ -10,13 +10,6 @@
   * @license MIT
   */
 
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
 /**
  * vue-meta v1.5.5
  * (c) 2018 Declan de Wet & Sébastien Chopin (@Atinux)
@@ -28,6 +21,13 @@ object-assign
 (c) Sindre Sorhus
 @license MIT
 */
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
 
 /*!
  * vue-no-ssr v1.0.0
@@ -1185,6 +1185,8 @@ object-assign
 
 /*! ../../mixins/toggleable */
 
+/*! ../../mixins/themeable */
+
 /*! ./mixins/menu-activator */
 
 /*! ./mixins/menu-generators */
@@ -1701,6 +1703,8 @@ object-assign
 
 /*! ../../stylus/components/_steppers.styl */
 
+/*! ../../mixins/registrable */
+
 /*! ../../mixins/themeable */
 
 /*!****************************************************!*\
@@ -1711,6 +1715,8 @@ object-assign
 
 /*! ../transitions */
 
+/*! ../../mixins/registrable */
+
 /*! ../../util/helpers */
 
 /*!*************************************************!*\
@@ -1720,6 +1726,10 @@ object-assign
 /*! exports provided: default */
 
 /*! ../VIcon */
+
+/*! ../../mixins/colorable */
+
+/*! ../../mixins/registrable */
 
 /*! ../../directives/ripple */
 
