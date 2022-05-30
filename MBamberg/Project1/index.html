@@ -1,236 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email1</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1 - Juneteenth Furniture</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Lato', sans-serif;
-            font-size: 12px;
-            background-color: rgb(231, 228, 228);
+      body {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        background-color: rgb(231, 228, 228);
+      }
 
-        }
+      .body-wrapper {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #f3eac8;
+      }
 
-        .body-wrapper {
-            max-width: 26rem;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #f3eac8;
-        }
+      .grid {
+        display: grid;
+      }
 
-        .grid {
-            display: grid;
-        }
+      .button {
+        cursor: pointer;
+        text-decoration: none;
+        color: currentColor;
+        display: inline-block;
+      }
 
-        .button {
-            cursor: pointer;
-            text-decoration: none;
-            color: currentColor;
-            display: inline-block;
-        }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      header {
+        position: relative;
+        background-image: url('img/bg.png');
+        background-size: contain;
+        background-position: right center;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        min-height: 32rem;
+        height: 42vw;
+        max-height: 40rem;
+        padding: 5.5rem 1rem 0 0.6rem;
+      }
 
-        header {
-            position: relative;
-            background-image: url('img/bg.png');
-            background-size: cover;
-            background-position: center top;
-            background-color: transparent;
-            background-repeat: no-repeat;
-            min-height: 30rem;
-            padding: 5.5rem 1rem 0 0.6rem;
-        }
+      header .banner-content {
+        max-width: 74%;
+      }
 
-        header .banner-content {
-            max-width: 74%;
-        }
+      header .small-title {
+        color: #da5947;
+        font-size: 1.7rem;
+      }
 
-        header .small-title {
-            color: #da5947;
-            font-size: 1.7rem;
-        }
+      header .big-title {
+        font-size: 2.5rem;
+        color: #02aa78;
+        line-height: 1.1;
+      }
 
-        header .big-title {
-            font-size: 2.5rem;
-            color: #02aa78;
-            line-height: 1.1;
-        }
+      header .banner-image-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        max-width: 293px;
+      }
 
-        header .banner-image-wrapper {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50%;
-            max-width: 293px;
-        }
+      header .banner-image {
+        width: 100%;
+        height: 100%;
+      }
 
-        header .banner-image {
-            width: 100%;
-            height: 100%;
-        }
+      main {
+        text-align: center;
+        padding: 0.2rem;
+        background-color: white;
+      }
 
-        main {
-            text-align: center;
-            padding: 0.2rem;
-            background-color: white;
-        }
+      main .product-grid {
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1.5rem;
+      }
 
-        main .product-grid {
-            display: grid;
-            row-gap: 1rem;
-            column-gap: 0.5rem;
-            grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 1.5rem;
-        }
+      main .product-title {
+        margin-top: 0.3rem;
+      }
 
-        main .product-title {
-            margin-top: 0.3rem;
-        }
+      main .product-img-wrapper {
+        max-width: 100%;
+      }
 
-        main .product-img-wrapper {
-            max-width: 100%;
-        }
+      main .product-img-wrapper img {
+        width: 100%;
+      }
 
-        main .product-img-wrapper img {
-            width: 100%;
-        }
+      main .products-section-header {
+        margin: 1.5rem;
+      }
 
-        main .products-section-header {
-            margin: 1.5rem;
-        }
+      main .product-price {
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 0.5rem;
+      }
 
-        main .product-price {
-            font-weight: 600;
-            font-size: 1rem;
-            margin: 0.5rem;
-        }
+      main .order-now {
+        background-color: #da5947;
+        color: white;
+        font-weight: 600;
+        font-size: 0.6rem;
+        padding: 0.5rem 2rem;
+        border-radius: 4px;
+      }
 
-        main .order-now {
-            background-color: #da5947;
-            color: white;
-            font-weight: 600;
-            font-size: 0.6rem;
-            padding: 0.5rem 2rem;
-            border-radius: 4px;
-        }
+      footer {
+        padding: 1rem 3rem;
+        text-align: center;
+        row-gap: 1rem;
+      }
 
-        footer {
-            padding: 1rem 3rem;
-            text-align: center;
-            row-gap: 1rem;
-        }
+      footer .logo {
+        width: 6rem;
+      }
 
-        footer .logo {
-            width: 6rem;
-        }
+      footer .social-media-wrapper {
+        display: flex;
+        gap: 0.2rem;
+        justify-content: center;
+        align-items: center;
+      }
 
-        footer .social-media-wrapper {
-            display: flex;
-            gap: 0.2rem;
-            justify-content: center;
-            align-items: center;
-        }
+      footer .social-media-icon {
+        width: 1.5rem;
+      }
 
-        footer .social-media-icon {
-            width: 1.5rem;
-        }
+      footer .social-media-icon img {
+        width: 100%;
+      }
 
-        footer .social-media-icon img {
-            width: 100%;
-        }
-
-        footer hr {
-            border-top: 1px solid black;
-        }
+      footer hr {
+        border-top: 1px solid black;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="body-wrapper">
-        <header>
-            <div class="banner-content">
-                <h1>
-                    <span class="small-title"><strong>JUNETEENTH</strong></span><br>
-                    <span class="big-title">FURNITURE <br>
-                        SALE</span>
-
-                </h1>
-                <small>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Quis ipsum suspendisse ultric
-                </small>
-                <div class="banner-image-wrapper">
-                    <img class="banner-image" src="img/mainchair.png" alt="banner-image">
-                </div>
+      <header>
+        <div class="banner-content">
+          <h1>
+            <span class="small-title"><strong>JUNETEENTH</strong></span
+            ><br />
+            <span class="big-title"
+              >FURNITURE <br />
+              SALE</span
+            >
+          </h1>
+          <small>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+            ipsum suspendisse ultric
+          </small>
+          <div class="banner-image-wrapper">
+            <img
+              class="banner-image"
+              src="img/mainchair.png"
+              alt="banner-image"
+            />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="products-section-header">
+          <h2>OUR POPULAR PRODUCTS</h2>
+          <small
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</small
+          >
+        </div>
+        <div class="grid product-grid">
+          <div class="product">
+            <div class="product-img-wrapper">
+              <img src="img/img1.png" alt="product-img" />
             </div>
-        </header>
-        <main>
-            <div class="products-section-header">
-                <h2>OUR POPULAR PRODUCTS</h2>
-                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et
-                    dolore
-                    magna aliqua.</small>
+            <h3 class="product-title">Kent Sofa</h3>
+            <p class="product-price">$80</p>
+            <a href="" class="button order-now">Order Now</a>
+          </div>
+          <div class="product">
+            <div class="product-img-wrapper">
+              <img src="img/img2.png" alt="product-img" />
             </div>
-            <div class="grid product-grid">
-                <div class="product">
-                    <div class="product-img-wrapper"><img src="img/img1.png" alt="product-img"></div>
-                    <h3 class="product-title">Kent Sofa</h3>
-                    <p class="product-price">$80</p>
-                    <a href="" class="button order-now">Order Now</a>
-                </div>
-                <div class="product">
-                    <div class="product-img-wrapper"><img src="img/img2.png" alt="product-img"></div>
-                    <h3 class="product-title">Osborne X Wooden</h3>
-                    <p class="product-price">$75</p>
-                    <a href="" class="button order-now">Order Now</a>
-                </div>
-                <div class="product">
-                    <div class="product-img-wrapper"><img src="img/img3.png" alt="product-img"></div>
-                    <h3 class="product-title">Dining Chair Deco</h3>
-                    <p class="product-price">$45</p>
-                    <a href="" class="button order-now">Order Now</a>
-                </div>
-                <div class="product">
-                    <div class="product-img-wrapper"><img src="img/img4.png" alt="product-img"></div>
-                    <h3 class="product-title">Dining Chair Rocco</h3>
-                    <p class="product-price">$56</p>
-                    <a href="" class="button order-now">Order Now</a>
-                </div>
+            <h3 class="product-title">Osborne X Wooden</h3>
+            <p class="product-price">$75</p>
+            <a href="" class="button order-now">Order Now</a>
+          </div>
+          <div class="product">
+            <div class="product-img-wrapper">
+              <img src="img/img3.png" alt="product-img" />
             </div>
-        </main>
-        <footer class="grid">
-            <div class="logo-wrapper"><img src="img/unlayer.png" alt="logo" class="logo"></div>
-            <h3 class="company-name">[COMPANY NAME]</h3>
-            <div class="social-media-wrapper">
-                <a href="" class="center button social-media-icon"><img src="img/facebook.png" alt=""></a>
-                <a href="" class="center button social-media-icon"><img src="img/linkedin.png" alt=""></a>
-                <a href="" class="center button social-media-icon"><img src="img/instagram.png" alt=""></a>
-                <a href="" class="center button social-media-icon"><img src="img/pinterest.png" alt=""></a>
+            <h3 class="product-title">Dining Chair Deco</h3>
+            <p class="product-price">$45</p>
+            <a href="" class="button order-now">Order Now</a>
+          </div>
+          <div class="product">
+            <div class="product-img-wrapper">
+              <img src="img/img4.png" alt="product-img" />
             </div>
-            <hr>
-            <small class="address">2261 Market Street #4667 San Francisco, CA 94114</small>
-        </footer>
+            <h3 class="product-title">Dining Chair Rocco</h3>
+            <p class="product-price">$56</p>
+            <a href="" class="button order-now">Order Now</a>
+          </div>
+        </div>
+      </main>
+      <footer class="grid">
+        <div class="logo-wrapper">
+          <img src="img/unlayer.png" alt="logo" class="logo" />
+        </div>
+        <h3 class="company-name">[COMPANY NAME]</h3>
+        <div class="social-media-wrapper">
+          <a href="" class="center button social-media-icon"
+            ><img src="img/facebook.png" alt=""
+          /></a>
+          <a href="" class="center button social-media-icon"
+            ><img src="img/linkedin.png" alt=""
+          /></a>
+          <a href="" class="center button social-media-icon"
+            ><img src="img/instagram.png" alt=""
+          /></a>
+          <a href="" class="center button social-media-icon"
+            ><img src="img/pinterest.png" alt=""
+          /></a>
+        </div>
+        <hr />
+        <small class="address"
+          >2261 Market Street #4667 San Francisco, CA 94114</small
+        >
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>

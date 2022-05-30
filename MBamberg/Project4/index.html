@@ -1,57 +1,465 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 4 - Thrive Market</title>
-    <style>
-      * {
+    <title>Project 5 - SailChimp HTML Email Template</title>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+      body {
         margin: 0;
+      }
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+      td {
         padding: 0;
-        box-sizing: border-box;
+      }
+      img {
+        border: 0;
+        max-width: 100%;
       }
 
-      body {
-        font-family: Arial, Helvetica, sans-serif;
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color: #e5dec7;
+        padding-bottom: 60px;
+      }
+
+      .main {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        font-family: sans-serif;
+        color: #4a4a4a;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
         text-align: center;
       }
 
-      img {
+      .column {
         width: 100%;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .social {
+        width: 38px;
+      }
+
+      .two-columns {
+        font-size: 0;
+      }
+
+      .two-columns .column {
+        max-width: 300px;
+      }
+      .three-columns {
+        font-size: 0;
+        padding: 35px 0 20px;
+      }
+
+      .three-columns .column {
+        max-width: 200px;
+      }
+
+      .three-columns .padding {
+        padding: 10px;
+      }
+
+      .three-columns .content {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      .social {
+        width: 38px;
+      }
+
+      .social-media {
+        padding: 12px 0 12px 62px;
+      }
+
+      h3 {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 28px;
+      }
+      .button {
+        background-color: #4a4a4a;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      h4 {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 22px;
+      }
+
+      .two-columns.last .content {
+        text-align: left;
+        padding: 35px;
+      }
+
+      .two-columns.last .content {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      .footer .social-media {
+        padding: 12px 0;
+      }
+
+      .footer a {
+        color: currentColor;
+        text-decoration: none;
+      }
+
+      .footer p {
+        padding: 5px 0 2px;
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="row flex">
-        <div class="logo-wrapper">
-          <img src="img/logo.png" alt="Thrive Market logo" class="logo" />
-        </div>
-        <div class="cart-wrapper">
-          <img src="img/cart-icon.png" alt="cart icon" class="cart" />
-        </div>
-      </div>
-      <nav>
-        <a class="btn nav-item">SHOP BY DIET</a>
-        <a class="btn nav-item">BESTSELLERS</a>
-        <a class="btn nav-item">NEW ITEMS</a>
-        <a class="btn nav-item">DEALS</a>
-      </nav>
-    </header>
-    <main>
-      <div class="offer"></div>
-      <div class="best-sellers"></div>
-      <div class="company-info"></div>
-      <div class="questions"></div>
-      <div class="trending-categories"></div>
-    </main>
-    <footer>
-      <div class="download-app"></div>
-      <div class="primary-actions"></div>
-      <div class="social-media-links"></div>
-      <div class="secondary-acions"></div>
-      <div class="disclaimer"></div>
-    </footer>
+    <center class="wrapper">
+      <table class="main" width="100%">
+        <!-- BORDER -->
+        <tr>
+          <td height="8" style="background-color: #000"></td>
+        </tr>
+        <!-- LOGO & SOCIAL MEDIA SECTION -->
+        <tr>
+          <td style="padding: 14px 0 4px">
+            <table width="100%">
+              <tr>
+                <td class="two-columns">
+                  <table class="column">
+                    <tr>
+                      <td style="padding: 0 22px 10px">
+                        <a href="#"
+                          ><img
+                            src="https://i.ibb.co/vcpZNqM/logo.png"
+                            alt="logo"
+                            width="250"
+                            title="SailChimp"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="column">
+                    <tr>
+                      <td class="social-media">
+                        <a href="#"
+                          ><img
+                            src="https://i.ibb.co/p2JKktb/facebook.png"
+                            alt="facebook"
+                            class="social"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="https://i.ibb.co/98hhmwp/twitter.png"
+                            alt="twitter"
+                            class="social"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="https://i.ibb.co/QmKwzbq/youtube.png"
+                            alt="youtube"
+                            class="social"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="https://i.ibb.co/8zRWCVn/linkedin.png"
+                            alt="linkedin"
+                            class="social"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="https://i.ibb.co/SQ3SXTh/instagram.png"
+                            alt="instagram"
+                            class="social"
+                        /></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- BANNER IMAGE -->
+        <tr>
+          <td>
+            <a href="#"
+              ><img
+                src="https://i.ibb.co/gWh3zWJ/banner.jpg"
+                width="600"
+                alt="Banner image"
+            /></a>
+          </td>
+        </tr>
+        <!-- TITLE, TEXT & BUTTON -->
+        <tr>
+          <td style="padding: 20px 15px 50px">
+            <table width="100%">
+              <tr>
+                <td>
+                  <h3>
+                    HTML Email Template
+                    <span style="color: #c89800">Course</span>
+                  </h3>
+                  <p
+                    style="
+                      line-height: 23px;
+                      font-size: 15px;
+                      padding: 0 0 22px;
+                    "
+                  >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Eos ab vero molestias incidunt provident, necessitatibus
+                    aliquam ipsam eligendi explicabo recusandae dicta cupiditate
+                    nulla quod velit odit rem id! Minus, sint.
+                  </p>
+                  <a href="#" class="button">View Course</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- BORDER -->
+        <tr>
+          <td height="2" style="background-color: #000"></td>
+        </tr>
+
+        <!-- THREE COLUMN SECTION -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="three-columns">
+                  <table class="column">
+                    <tr>
+                      <td class="padding">
+                        <table class="content">
+                          <tr>
+                            <td>
+                              <a href="#"
+                                ><img
+                                  width="150"
+                                  src="https://i.ibb.co/1JFJq02/design.png"
+                                  alt=""
+                              /></a>
+                            </td>
+                          </tr>
+                          <tr style="padding: 5px 0 10px">
+                            <td>
+                              <h4>Email Design</h4>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Fuga, velit.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="column">
+                    <tr>
+                      <td class="padding">
+                        <table class="content">
+                          <tr>
+                            <td>
+                              <a href="#"
+                                ><img
+                                  width="150"
+                                  src="https://i.ibb.co/vmZVJZy/development.png"
+                                  alt=""
+                              /></a>
+                            </td>
+                          </tr>
+                          <tr style="padding: 5px 0 10px">
+                            <td>
+                              <h4>Email Development</h4>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Fuga, velit.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="column">
+                    <tr>
+                      <td class="padding">
+                        <table class="content">
+                          <tr>
+                            <td>
+                              <a href="#"
+                                ><img
+                                  width="150"
+                                  src="https://i.ibb.co/Qr1kgYs/marketing.png"
+                                  alt=""
+                              /></a>
+                            </td>
+                          </tr>
+                          <tr style="padding: 5px 0 10px">
+                            <td>
+                              <h4>Email Marketing</h4>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Fuga, velit.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- BORDER -->
+        <tr>
+          <td height="2" style="background-color: #000"></td>
+        </tr>
+        <!-- TWO COLUMN SECTION -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-columns last">
+                  <table class="column">
+                    <tr>
+                      <td class="padding">
+                        <table class="content">
+                          <tr>
+                            <td>
+                              <a href="#"
+                                ><img
+                                  src="https://i.ibb.co/ZVKnd6f/palette.png"
+                                  alt="palette image"
+                                  width="260"
+                              /></a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="column">
+                    <tr>
+                      <td class="padding">
+                        <table class="content">
+                          <tr>
+                            <td>
+                              <h4>Create Custom Designs</h4>
+                              <p>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit.
+                              </p>
+                              <p style="padding-bottom: 15px">
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit.
+                              </p>
+                              <a href="#" class="button">HTML Email Course</a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- FOOTER SECTION -->
+        <tr>
+          <td
+            class="footer"
+            style="padding: 12px 0 24px; background-color: #24262b; color: #fff"
+          >
+            <table width="100%">
+              <tr>
+                <td>
+                  <a href="#"
+                    ><img
+                      src="https://i.ibb.co/vcpZNqM/logo.png"
+                      alt="logo"
+                      width="200"
+                  /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>SailChimp HTML, Email Template</p>
+                  <p>123 Street Road, City, State 555555</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="social-media">
+                  <a href="#"
+                    ><img
+                      src="https://i.ibb.co/p2JKktb/facebook.png"
+                      alt="facebook"
+                      class="social"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      src="https://i.ibb.co/98hhmwp/twitter.png"
+                      alt="twitter"
+                      class="social"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      src="https://i.ibb.co/QmKwzbq/youtube.png"
+                      alt="youtube"
+                      class="social"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      src="https://i.ibb.co/8zRWCVn/linkedin.png"
+                      alt="linkedin"
+                      class="social"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      src="https://i.ibb.co/SQ3SXTh/instagram.png"
+                      alt="instagram"
+                      class="social"
+                  /></a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="#">SUBSCRIBE</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Border -->
+        <tr>
+          <td height="8" style="background-color: #000"></td>
+        </tr>
+      </table>
+      <!-- End Main Class -->
+    </center>
+    <!-- End Wrapper -->
   </body>
 </html>
