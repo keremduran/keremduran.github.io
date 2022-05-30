@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project3 - Company Anniversary</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #e7e7e7;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      p {
+        margin: 1rem 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .body-container {
+        background-image: url('img/bg.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 0 2.5rem;
+      }
+
+      .text-white {
+        color: white;
+      }
+
+      .text-xxl {
+        font-size: 22.9rem;
+      }
+
+      .text-pink {
+        color: #e31e3e;
+      }
+
+      .text-thin {
+        font-weight: 100;
+      }
+
+      .stretch-x {
+        -webkit-transform: scale(1.2, 1); /* Safari and Chrome */
+        -moz-transform: scale(1.2, 1); /* Firefox */
+        -ms-transform: scale(1.2, 1); /* IE 9 */
+        -o-transform: scale(1.2, 1); /* Opera */
+        transform: scale(1.2, 1); /* W3C */
+      }
+
+      .button {
+        cursor: pointer;
+        text-decoration: none;
+        color: currentColor;
+        display: inline-block;
+      }
+
+      .shop-now {
+        background-color: #e31e3e;
+        color: white;
+        padding: 0.8rem 4rem;
+        border-radius: 4px;
+        font-weight: 600;
+        margin: 1rem;
+      }
+
+      .padding-1rem {
+        padding: 1rem;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      header {
+        padding-top: 5.5rem;
+      }
+
+      header h1 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      header h1 .text-white {
+        font-size: 4rem;
+        display: contents;
+      }
+
+      header h1 .text-xxl {
+        line-height: 95%;
+      }
+
+      header h1 .text-pink {
+        font-size: 6.4rem;
+        margin-top: 6rem;
+        font-family: 'Georgia', 'palatino', serif;
+        font-weight: 500;
+      }
+
+      header h1 .text-thin {
+        /* Montserrat font-family doesn't support font-weight below 300 by default.  */
+        font-size: 3rem;
+        font-family: 'Georgia', 'palatino', serif;
+        color: rgb(81, 81, 81);
+      }
+
+      header .description {
+        margin: 2rem 0;
+      }
+
+      main {
+        padding: 0 0.5rem;
+      }
+
+      main .title {
+        color: #5a5a5a;
+        font-family: 'Montserrat', sans-serif;
+        margin: 2rem 0;
+        font-size: 1.4rem;
+      }
+
+      footer > .flex {
+        margin-top: 2rem;
+      }
+
+      footer .contact {
+        text-align: left;
+      }
+
+      footer .description {
+        text-align: right;
+        font-size: 1.1rem;
+        padding-left: 7rem;
+        color: #5a5a5a;
+      }
+
+      .address-bar {
+        background-color: #5a5a5a;
+        color: white;
+        padding: 1rem;
+      }
+
+      footer .social-media-wrapper {
+        gap: 1.2rem;
+        margin: 1rem 0;
+      }
+
+      footer .social-media-wrapper img {
+        max-width: 6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body-container">
+      \
+      <header>
+        <h1>
+          <span class="text-white">
+            <span class="text-xxl">5</span>
+            <span>years</span>
+          </span>
+          <span class="text-pink">Anniversary</span>
+          <span class="text-thin stretch-x">Celebration</span>
+        </h1>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+          lacus vel facilisis.
+        </p>
+      </header>
+      <main>
+        <div class="title stretch-x">
+          <span>Its a big week for us</span>
+          <h2>Special Discount !</h2>
+        </div>
+        <img src="img/appliances.png" alt="applicances" />
+        <a href="" class="shop-now button">Shop Now</a>
+      </main>
+      <footer>
+        <div class="flex">
+          <div class="column contact">
+            <h2>COMPANY</h2>
+            <div class="social-media-wrapper flex">
+              <a href="" class="btn social-media-icon"
+                ><img src="img/linkedin.png" alt="linkedin"
+              /></a>
+              <a href="" class="btn social-media-icon"
+                ><img src="img/facebook.png" alt="facebook"
+              /></a>
+              <a href="" class="btn social-media-icon"
+                ><img src="img/pinterest.png" alt="pinterest"
+              /></a>
+            </div>
+          </div>
+          <div class="column description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut l
+          </div>
+        </div>
+      </footer>
+      \
+    </div>
+    <div class="address-bar">
+      2261 Market Street #4667 San Francisco, CA 94114
+    </div>
+  </body>
+</html>

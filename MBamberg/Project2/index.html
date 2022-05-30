@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project2 - Special Books</title>
+    <style>
+        html {
+            font-size: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: auto;
+            margin: 0;
+            font-family: 'Arial';
+            text-align: center;
+            color: white;
+        }
+
+        .body-wrapper {
+            margin: 0 auto;
+            max-width: 60rem;
+            background-color: black;
+        }
+
+        a {
+            color: currentColor;
+            text-decoration: none;
+        }
+
+        small {
+            color: #CED4D9;
+            font-size: 90%;
+        }
+
+        .smaller {
+            font-size: 80%;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        header {
+            background-image: url('img/banner-background.png');
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            position: relative;
+        }
+
+
+        header h1 {
+            font-weight: 900;
+            color: black;
+        }
+
+        header h2 {
+            color: white;
+            font-weight: 900;
+            font-size: 1rem;
+        }
+
+        header .banner-content {
+            padding: 2rem 10%;
+        }
+
+        header img {
+            width: 50%;
+            max-width: 30rem;
+        }
+
+        main .grid {
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        }
+
+        main .grid img {
+            max-width: 100%;
+        }
+
+        main .grid .compare-at {
+            color: #f1c40f;
+            text-decoration: line-through;
+        }
+
+        main .grid .product-card {
+            padding: 1rem;
+        }
+
+        main .grid h4,
+        .current-price {
+            margin: 0.3rem 0;
+            font-weight: 750;
+        }
+
+        main .grid .order-now {
+            color: #151615;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            font-size: 80%;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+        }
+
+        footer {
+            padding: 3rem 0;
+        }
+
+        footer .social-media-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        footer .social-media-wrapper img {
+            max-width: 2rem;
+        }
+
+        footer .actions-wrapper {
+            margin: 0.7rem 0;
+        }
+
+        footer .actions-wrapper a {
+            padding: 0 0.3rem;
+            border-left: 1px solid currentColor;
+        }
+
+        footer .actions-wrapper :first-child {
+            border-left: none;
+        }
+
+        footer .address {
+            border-top: 1px solid currentColor;
+            padding: 1rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+            html {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body-wrapper">
+        <header>
+            <h1> <span class="smaller">BOOKS FOR</span> <br>JUNETEENTH</h1>
+            <img src="img/designbook.png" alt="banner-image" class="banner-image" />
+            <div class="banner-content">
+                <h2>OUR JUNETEENTH SALE 30% OFF</h2>
+                <small>This year we are discounting some popular titles by African American
+                    authors like Ta-Nehisi Coates or Roxane Gay in order make it easier than
+                    ever before possible try one out if they're newish release without
+                    breaking the bank with expensive college tuition costs.</small>
+            </div>
+        </header>
+        <main>
+            <div class="grid products">
+                <div class="product-card">
+
+                    <img src="img/book1.png" alt="book-image">
+
+                    <h4 class="product-title">Juneteenth</h4>
+                    <small class="product-description">Lorem ipsum dolor sit amet, consect.</small>
+                    <p class="price">
+                        <small class="compare-at">$100</small>
+                        <span class="current-price">$70</span>
+                    </p>
+                    <a href="" class="button order-now"> Order Now </a>
+                </div>
+                <div class="product-card">
+                    <img src="img/book2.png" alt="book-image">
+                    <h4 class="product-title">Just Mercy</h4>
+                    <small class="product-description">Lorem ipsum dolor sit amet, consect.</small>
+                    <p class="price">
+                        <small class="compare-at">$112</small>
+                        <span class="current-price">$85</span>
+                    </p>
+                    <a href="" class="button order-now"> Order Now </a>
+                </div>
+                <div class="product-card">
+                    <img src="img/book3.png" alt="book-image">
+                    <h4 class="product-title">Black Hairs</h4>
+                    <small class="product-description">Lorem ipsum dolor sit amet,consect.</small>
+                    <p class="price">
+                        <small class="compare-at">$125</small>
+                        <span class="current-price">$101</span>
+                    </p>
+                    <a href="" class="button order-now"> Order Now </a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="social-media-wrapper">
+                <a href="" class="button"><img src="img/facebook.png" alt="facebook-logo" /></a>
+                <a href="" class="button"><img src="img/pinterest.png" alt="pinterest-logo" /></a>
+                <a href="" class="button"><img src="img/instagram.png" alt="instagram-logo" /></a>
+                <a href="" class="button"><img src="img/linkedin.png" alt="linkedin-logo" /></a>
+            </div>
+            <div class="actions-wrapper">
+                <a href="">Preferences</a>
+                <a href="">Unsubscribe</a>
+                <a href="">View in browser</a>
+            </div>
+            <small class="description">Lorem ipsum dolor sit amet, consect etuer adipiscing elit, sed diam
+                noun mmy nibh euismod.</small>
+            <p class="address">2261 Market Street #4667 San Francisco, CA 94114</p>
+        </footer>
+    </div>
+</body>
+
+</html>
